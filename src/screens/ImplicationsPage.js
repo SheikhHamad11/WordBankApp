@@ -1,4 +1,4 @@
-import {View, Text, StyleSheet, ScrollView, Dimensions} from 'react-native';
+import {View, Text, StyleSheet, ScrollView} from 'react-native';
 import React, {useState} from 'react';
 import {TouchableOpacity} from 'react-native-gesture-handler';
 import {List, Button, Modal} from 'react-native-paper';
@@ -110,8 +110,7 @@ const styles = StyleSheet.create({
     // justifyContent: 'center',
     alignItems: 'center',
     flex: 1,
-    height:  Dimensions.get('window').height,
-    backgroundColor:'white'
+    height: '100%',
   },
   heading1: {
     fontSize: 25,

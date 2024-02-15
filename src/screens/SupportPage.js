@@ -107,7 +107,8 @@ export default function SupportPage({navigation, route}) {
           animationType="fade"
           transparent={true}
           visible={modalVisible}
-          onRequestClose={closeModal}>
+          onRequestClose={closeModal}
+          style={styles.mainContainer}>
           <TouchableOpacity
             activeOpacity={1}
             onPressOut={closeModal}
@@ -115,12 +116,29 @@ export default function SupportPage({navigation, route}) {
             <View style={styles.modalContainer}>
               <View style={styles.modalContent}>
                 <View style={{marginVertical: 4}}>
-                  <TouchableOpacity
-                    onPress={() =>
-                      Linking.openURL('http://www.wordbank.org.uk/')
-                    }>
-                    <Icon name="globe-asia" size={30} color="#0274B3" />
-                  </TouchableOpacity>
+                  <Text style={styles.heading1}>Firstly</Text>
+                  <Text style={{color: 'black'}}>
+                    It has been shown,
+                    <Text style={{fontWeight: '900', color: 'black'}}>
+                      firstly{' '}
+                    </Text>
+                    , that the missionary journeys cannot...
+                  </Text>
+                  <Text style={{color: 'black'}}>
+                    👥It has been shown,
+                    <Text style={{fontWeight: '900', color: 'black'}}>
+                      firstly{' '}
+                    </Text>
+                    , that the missionary journeys cannot...
+                  </Text>
+                  <Text style={{color: 'black'}}>
+                    It has been shown,
+                    <Text style={{fontWeight: '900', color: 'black'}}>
+                      firstly{' '}
+                    </Text>
+                    , that the missionary journeys cannot...
+                  </Text>
+                  
                 </View>
 
                 {/* <Button title="Close Modal" onPress={closeModal} /> */}
@@ -138,7 +156,7 @@ const styles = StyleSheet.create({
     // justifyContent: 'center',
     alignItems: 'center',
     flex: 1,
-    height:  Dimensions.get('window').height,
+    height:'100%',
     backgroundColor:'white'
   },
   heading1: {
@@ -174,10 +192,16 @@ const styles = StyleSheet.create({
   button4: {
     backgroundColor: '#CD00FF',
   },
-  modalContainer: {
+  mainContainer: {
+    justifyContent: 'flex-start',
     flex: 1,
-    paddingTop: 1000,
-    paddingEnd: 10,
+  },
+  modalContainer: {
+    width: '100%',
+    height: Dimensions.get('window').height,
+    // flex: 1,
+    paddingTop: 60,
+    // paddingEnd: 10,
     justifyContent: 'center',
     alignItems: 'center',
     backgroundColor: 'rgba(0, 0, 0, 0.5)',
@@ -187,7 +211,7 @@ const styles = StyleSheet.create({
     marginEnd: 10,
     padding: 10,
     borderRadius: 10,
-    elevation: 5,
+    // elevation: 5,
   },
   overlay: {
     flex: 1,

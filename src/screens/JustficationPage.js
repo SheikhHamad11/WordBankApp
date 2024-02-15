@@ -41,6 +41,7 @@ export default function JustificationPage({navigation, route}) {
               title="CREATE SEQUENCE"
               style={[styles.button, styles.button1]}
               right={() => null}
+
               id="1">
               {createSequence.map((item, index) => (
                 <List.Item
@@ -56,8 +57,8 @@ export default function JustificationPage({navigation, route}) {
               titleStyle={{color: 'white', padding: 8, fontSize: 18}}
               title="SHOW CONTRAST"
               style={[styles.button, styles.button2]}
-              id="2"
-              right={() => null}>
+              right={() => null}
+              id="2">
               {showContrast.map((item, index) => (
                 <List.Item
                   onPress={() => setModalVisible(true)}
@@ -71,8 +72,8 @@ export default function JustificationPage({navigation, route}) {
               titleStyle={{color: 'white', padding: 8, fontSize: 18}}
               title="INSERT REFERENCE"
               style={[styles.button, styles.button3]}
-              id="3"
-              right={() => null}>
+              right={() => null}
+              id="3">
               {InsertReferenceWithIds.map((item, index) => (
                 <List.Item
                   onPress={() => setModalVisible(true)}
@@ -84,12 +85,12 @@ export default function JustificationPage({navigation, route}) {
             </List.Accordion>
           </List.AccordionGroup>
         </View>
-
         <Modal
           animationType="fade"
           transparent={true}
           visible={modalVisible}
-          onRequestClose={closeModal}>
+          onRequestClose={closeModal}
+          style={styles.mainContainer}>
           <TouchableOpacity
             activeOpacity={1}
             onPressOut={closeModal}
@@ -97,12 +98,28 @@ export default function JustificationPage({navigation, route}) {
             <View style={styles.modalContainer}>
               <View style={styles.modalContent}>
                 <View style={{marginVertical: 4}}>
-                  <TouchableOpacity
-                    onPress={() =>
-                      Linking.openURL('http://www.wordbank.org.uk/')
-                    }>
-                    <Icon name="globe-asia" size={30} color="#0274B3" />
-                  </TouchableOpacity>
+                  <Text style={styles.heading1}>Firstly</Text>
+                  <Text style={{color: 'black'}}>
+                    It has been shown,
+                    <Text style={{fontWeight: '900', color: 'black'}}>
+                      firstly{' '}
+                    </Text>
+                    , that the missionary journeys cannot...
+                  </Text>
+                  <Text style={{color: 'black'}}>
+                    👥It has been shown,
+                    <Text style={{fontWeight: '900', color: 'black'}}>
+                      firstly{' '}
+                    </Text>
+                    , that the missionary journeys cannot...
+                  </Text>
+                  <Text style={{color: 'black'}}>
+                    It has been shown,
+                    <Text style={{fontWeight: '900', color: 'black'}}>
+                      firstly{' '}
+                    </Text>
+                    , that the missionary journeys cannot...
+                  </Text>
                 </View>
 
                 {/* <Button title="Close Modal" onPress={closeModal} /> */}
@@ -120,8 +137,8 @@ const styles = StyleSheet.create({
     // justifyContent: 'center',
     alignItems: 'center',
     flex: 1,
-    height:  Dimensions.get('window').height,
-    backgroundColor:'white'
+    height: '100%',
+    backgroundColor: 'white',
   },
   heading1: {
     fontSize: 25,
@@ -137,9 +154,9 @@ const styles = StyleSheet.create({
     // textAlign:'center',
     justifyContent: 'center',
   },
-  listitem:{
-    borderBottomWidth:1,
-    borderColor:"#E8E8E8"
+  listitem: {
+    borderBottomWidth: 1,
+    borderColor: '#E8E8E8',
   },
   button: {
     marginVertical: 7,
@@ -162,11 +179,16 @@ const styles = StyleSheet.create({
   button4: {
     backgroundColor: '#CD00FF',
   },
-
-  modalContainer: {
+  mainContainer: {
+    justifyContent: 'flex-start',
     flex: 1,
-    paddingTop: 1000,
-    paddingEnd: 10,
+  },
+  modalContainer: {
+    width: '100%',
+    height: Dimensions.get('window').height,
+    // flex: 1,
+    paddingTop: 60,
+    // paddingEnd: 10,
     justifyContent: 'center',
     alignItems: 'center',
     backgroundColor: 'rgba(0, 0, 0, 0.5)',
@@ -176,7 +198,7 @@ const styles = StyleSheet.create({
     marginEnd: 10,
     padding: 10,
     borderRadius: 10,
-    elevation: 5,
+    // elevation: 5,
   },
   overlay: {
     flex: 1,
