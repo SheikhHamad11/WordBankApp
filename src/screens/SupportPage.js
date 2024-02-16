@@ -1,35 +1,35 @@
-import {View, Text, StyleSheet, ScrollView, Dimensions} from 'react-native';
 import React, {useState} from 'react';
-import {TouchableOpacity} from 'react-native-gesture-handler';
-import {List, Button, Modal} from 'react-native-paper';
-import Icon from 'react-native-vector-icons/FontAwesome5';
 import {
-  InsertReferenceWithIds,
-  createSequence,
-  showContrast,
+  View,
+  Modal,
+  Text,
+  StyleSheet,
+  TouchableOpacity,
+  ScrollView,
+} from 'react-native';
+import {Button, List} from 'react-native-paper';
+import {
+  SumUp,
   titlesWithIds,
+  showContrast,
+  createSequence,
+  InsertReferenceWithIds,
 } from '../components/ListItems';
-// import Collapsible from 'react-native-collapsible';
 
-export default function SupportPage({navigation, route}) {
-  const [isCollapsed, setIsCollapsed] = useState(true);
+const SupportPage = () => {
   const [modalVisible, setModalVisible] = useState(false);
-  const [visible, setVisible] = useState(false);
-  const containerStyle = {backgroundColor: 'white', padding: 20};
-  const showModal = () => setVisible(true);
-  const hideModal = () => setVisible(false);
-  const closeModal = () => {
-    setModalVisible(false);
-  };
-  const toggleCollapse = () => {
-    setIsCollapsed(!isCollapsed);
+  const [modalContent, setModalContent] = useState('');
+
+  const openModal = content => {
+    setModalContent(content);
+    setModalVisible(true);
   };
 
   return (
-    <>
-      <ScrollView>
-        <View style={styles.flexContainer}>
-          <View style={{marginTop: 30}}>
+    <ScrollView>
+      <View style={styles.container}>
+        <View>
+          <View style={{marginTop: 20}}>
             <Text style={styles.heading1}>3. Support</Text>
             <Text style={styles.heading2}>
               Use theory to analyse furthur,including referenced evidence and
@@ -39,64 +39,63 @@ export default function SupportPage({navigation, route}) {
 
           <List.AccordionGroup>
             <List.Accordion
-              titleStyle={{color: 'white', padding: 10, fontSize: 18}}
+              titleStyle={styles.buttonText}
               title="CREATE SEQUENCE"
               style={[styles.button, styles.button2]}
               right={() => null}
               id="1">
               {createSequence.map((item, index) => (
                 <List.Item
-                  onPress={() => setModalVisible(true)}
                   key={item.id}
                   style={styles.listitem}
                   title={item.title}
+                  onPress={() => openModal(item.title)}
                 />
               ))}
-              <Button title="press" onPress={() => setModalVisible(true)} />
             </List.Accordion>
-
+          
             <List.Accordion
-              titleStyle={{color: 'white', padding: 8, fontSize: 18}}
+              titleStyle={styles.buttonText}
               title="INSERT REFERENCE"
               style={[styles.button, styles.button3]}
               id="3"
               right={() => null}>
               {InsertReferenceWithIds.map((item, index) => (
                 <List.Item
-                  onPress={() => setModalVisible(true)}
                   key={item.id}
                   style={styles.listitem}
                   title={item.title}
+                  onPress={() => openModal(item.title)}
                 />
               ))}
             </List.Accordion>
             <List.Accordion
-              titleStyle={{color: 'white', padding: 8, fontSize: 18}}
+              titleStyle={styles.buttonText}
               title="SHOW CAUSE AND EFFECT"
               style={[styles.button, styles.button4]}
               id="4"
               right={() => null}>
               {titlesWithIds.map((item, index) => (
                 <List.Item
-                  onPress={() => setModalVisible(true)}
                   key={item.id}
                   style={styles.listitem}
                   title={item.title}
+                  onPress={() => openModal(item.title)}
                 />
               ))}
             </List.Accordion>
             <List.Accordion
-              titleStyle={{color: 'white', padding: 8, fontSize: 18}}
+              titleStyle={styles.buttonText}
               title="SHOW CONTRAST"
               style={[styles.button, styles.button2]}
-              id="2"
-              right={() => null}>
+              right={() => null}
+              id="2">
               {showContrast.map((item, index) => (
                 <List.Item
-                  onPress={() => setModalVisible(true)}
                   key={item.id}
                   style={styles.listitem}
                   title={item.title}
+                  onPress={() => openModal(item.title)}
                 />
               ))}
             </List.Accordion>
@@ -104,63 +103,85 @@ export default function SupportPage({navigation, route}) {
         </View>
 
         <Modal
-          animationType="fade"
+          animationType="slide"
           transparent={true}
           visible={modalVisible}
-          onRequestClose={closeModal}>
+          onRequestClose={() => {
+            setModalVisible(false);
+          }}>
           <TouchableOpacity
             activeOpacity={1}
-            onPressOut={closeModal}
-            style={styles.overlay}>
-            <View style={styles.modalContainer}>
-              <View style={styles.modalContent}>
-                <View style={{marginVertical: 4}}>
-                  <TouchableOpacity
-                    onPress={() =>
-                      Linking.openURL('http://www.wordbank.org.uk/')
-                    }>
-                    <Icon name="globe-asia" size={30} color="#0274B3" />
-                  </TouchableOpacity>
-                </View>
-
-                {/* <Button title="Close Modal" onPress={closeModal} /> */}
-              </View>
+            style={styles.modalContainer}
+            onPress={() => setModalVisible(false)}>
+            <View style={styles.modalContent}>
+              <Text style={styles.modalText}>{modalContent}</Text>
             </View>
           </TouchableOpacity>
         </Modal>
-      </ScrollView>
-    </>
+      </View>
+    </ScrollView>
   );
-}
+};
 
 const styles = StyleSheet.create({
-  flexContainer: {
-    // justifyContent: 'center',
-    alignItems: 'center',
+  container: {
     flex: 1,
-    height:  Dimensions.get('window').height,
-    backgroundColor:'white'
+    // justifyContent: 'center',
+    // alignItems: 'center',
+    padding: 20,
+  },
+  button: {
+    backgroundColor: 'lightblue',
+    borderRadius: 5,
+    marginVertical: 5,
+  },
+  buttonText: {
+    color: 'white',
+    padding: 8,
+    fontSize: 18,
   },
   heading1: {
     fontSize: 25,
     fontWeight: '900',
     color: 'black',
+    // textAlign:'center'
   },
   heading2: {
     marginVertical: 10,
-    fontSize: 20,
+    fontSize: 21,
+    // fontWeight: '900',
     color: 'black',
+    // textAlign:'center',
+    justifyContent: 'center',
   },
-  listitem:{
-    borderBottomWidth:1,
-    borderColor:"#E8E8E8"
+  listitem: {
+    borderBottomWidth: 1,
+    borderBottomColor: 'gray',
+  },
+  modalContainer: {
+    flex: 1,
+    justifyContent: 'center',
+    alignItems: 'center',
+    backgroundColor: 'rgba(0,0,0,0.5)',
+  },
+  modalContent: {
+    backgroundColor: 'white',
+    padding: 20,
+    borderRadius: 10,
+  },
+  modalText: {
+    fontSize: 18,
+    textAlign: 'center',
+    color: 'black',
   },
   button: {
     marginVertical: 7,
     width: 350,
+    // padding: 20,
+    // color: 'white',
     borderRadius: 5,
-    fontWeight: '500',
-    lineHeight: 1.1,
+    fontSize: 27,
+    fontWeight: '100',
   },
   button1: {
     backgroundColor: '#548DD4',
@@ -174,23 +195,6 @@ const styles = StyleSheet.create({
   button4: {
     backgroundColor: '#CD00FF',
   },
-  modalContainer: {
-    flex: 1,
-    paddingTop: 1000,
-    paddingEnd: 10,
-    justifyContent: 'center',
-    alignItems: 'center',
-    backgroundColor: 'rgba(0, 0, 0, 0.5)',
-  },
-  modalContent: {
-    backgroundColor: 'white',
-    marginEnd: 10,
-    padding: 10,
-    borderRadius: 10,
-    elevation: 5,
-  },
-  overlay: {
-    flex: 1,
-    backgroundColor: 'rgba(0, 0, 0, 0.5)',
-  },
 });
+
+export default SupportPage;
