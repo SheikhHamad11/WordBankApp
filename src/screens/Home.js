@@ -1,19 +1,24 @@
-import {View, Text, Button, StyleSheet, Image, ScrollView, Dimensions} from 'react-native';
-import React from 'react';
+import {
+  View,
+  Text,
+  Button,
+  StyleSheet,
+  Image,
+  ScrollView,
+  Dimensions,
+} from 'react-native';
+import React, {useState} from 'react';
 import Icon from 'react-native-vector-icons/FontAwesome5';
+import Circle from '../components/Circle';
 export default function Home({navigation}) {
+  const [angle, setangle] = useState();
   return (
     <ScrollView>
       <View style={styles.flexContainer}>
         <View style={{marginTop: 30}}>
           <Text style={styles.heading}>Paragraph Structure</Text>
         </View>
-        <View style={{marginVertical: 40}}>
-          <Image
-            style={styles.image}
-            source={require('../../src/Images/wordbank.png')}
-          />
-        </View>
+        <Circle angle={angle} setAngle={setangle} />
 
         <View style={{marginTop: 10}}>
           <Text style={styles.heading1}>1. Claim</Text>
@@ -97,7 +102,7 @@ const styles = StyleSheet.create({
     alignItems: 'center',
     flex: 1,
     backgroundColor: 'white',
-    height:  Dimensions.get('window').height,
+    height: Dimensions.get('window').height,
   },
   flexCenter: {
     justifyContent: 'center',
