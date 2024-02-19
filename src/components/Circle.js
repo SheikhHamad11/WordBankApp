@@ -25,29 +25,29 @@ const Circle = ({angle, setAngle}) => {
         // Normalize pageX and pageY values
         const normalizedX = pageX / screenWidth;
         const normalizedY = pageY / screenHeight;
-        // console.log(`normalizedX: ${normalizedX}, normalizedY: ${normalizedY}`);
+        console.log(`normalizedX: ${normalizedX}, normalizedY: ${normalizedY}`);
 
         // Define regions based on normalized values
         const region1 =
-          normalizedX >= 0.1 &&
-          normalizedX <= 0.76 &&
-          normalizedY >= 0.1 &&
-          normalizedY <= 0.193;
+          normalizedX >= 0.25 &&
+          normalizedX <= 0.67 &&
+          normalizedY >= 0.25 &&
+          normalizedY <= 0.34;
         const region2 =
-          normalizedX >= 0.67 &&
-          normalizedX <= 0.9 &&
-          normalizedY >= 0.194 &&
-          normalizedY <= 0.4;
+          normalizedX >= 0.72 &&
+          normalizedX <= 0.88 &&
+          normalizedY >= 0.35 &&
+          normalizedY <= 0.55;
         const region3 =
-          normalizedX >= 0.1 &&
-          normalizedX <= 0.76 &&
-          normalizedY >= 0.41 &&
-          normalizedY <= 0.48;
+          normalizedX >= 0.3 &&
+          normalizedX <= 0.7 &&
+          normalizedY >= 0.57 &&
+          normalizedY <= 0.63;
         const regionMiddle =
           normalizedX >= 0.27 &&
-          normalizedX <= 0.66 &&
-          normalizedY >= 0.2 &&
-          normalizedY <= 0.4;
+          normalizedX <= 0.7 &&
+          normalizedY >= 0.35 &&
+          normalizedY <= 0.56;
 
         if (region1) {
           setAngle(90);
@@ -144,9 +144,13 @@ const Circle = ({angle, setAngle}) => {
   // };
 
   useEffect(() => {
+    // console.log(rotation.__getValue());
+    if (angle === 360 && rotation.__getValue() === 0) {
+      return;
+    }
     const rotateAnimation = Animated.timing(rotation, {
       toValue: angle, // Rotate 360 degrees
-      duration: 1000, // Adjust the duration as needed
+      duration: 500, // Adjust the duration as needed
       easing: Easing.linear,
       useNativeDriver: true,
     });
@@ -211,7 +215,7 @@ const Circle = ({angle, setAngle}) => {
   };
 
   return (
-    <View style={styles.MainCircle} {...triangleResponder.panHandlers}>
+    <View style={styles.MainCircle}>
       {/* <TouchableOpacity onPress={rotateView} style={{alignSelf: 'flex-start'}}>
         <View
           style={[
@@ -224,7 +228,7 @@ const Circle = ({angle, setAngle}) => {
         <Animated.Image
           source={require('../Images/wordbank.png')}
           style={styles.imgStyle}
-          // {...panResponder.panHandlers}
+          {...panResponder.panHandlers}
         />
       </View>
     </View>
