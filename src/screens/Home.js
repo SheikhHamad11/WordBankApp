@@ -8,6 +8,7 @@ import {
 } from '../Redux_Configuration/Selector';
 export default function Home({navigation}) {
   const [index, setindex] = useState(0);
+  const [centerClick, setcenterClick] = useState(false);
   const {heading, Category} = useSelector(
     useMemo(
       () => state => ({
@@ -17,26 +18,39 @@ export default function Home({navigation}) {
       [index],
     ),
   );
-  const [angle, setangle] = useState();
+  const [angle, setangle] = useState(90);
   useEffect(() => {
-    if (angle === 360 || angle === 0) {
-      setindex(0);
-    } else if (angle === 90) {
-      setindex(1);
-    } else if (angle === 180) {
-      setindex(2);
-    } else if (angle === 270) {
-      setindex(3);
+    if (!centerClick) {
+      if (angle === 360 || angle === 0) {
+        setindex(0);
+      } else if (angle === 90) {
+        setindex(1);
+      } else if (angle === 180) {
+        setindex(2);
+      } else if (angle === 270) {
+        setindex(3);
+      }
+    } else {
+      navigate();
     }
-  }, [angle]);
+  }, [angle, centerClick]);
+  const navigate = () => {
+    // console.log(`HOme index: ${index}`);
+    setcenterClick(false);
+    navigation.navigate('DetailPage', {index});
+  };
   return (
     <View style={styles.flexContainer}>
-      <View style={styles.MainHeadingContainer}>
+      <View>
         <Text style={styles.heading}>{heading}</Text>
       </View>
-      <Circle angle={angle} setAngle={setangle} />
+      <Circle
+        angle={angle}
+        setAngle={setangle}
+        setcenterClick={setcenterClick}
+      />
 
-      <View style={{marginTop: 50}}>
+      <View style={{height: 100}}>
         <Text style={styles.heading1}>{Category.title}</Text>
         <Text style={styles.description}>{Category.description}</Text>
       </View>
@@ -46,21 +60,12 @@ export default function Home({navigation}) {
 
 const styles = StyleSheet.create({
   flexContainer: {
-    paddingVertical: 40,
     paddingHorizontal: 20,
-    justifyContent: 'center',
+    justifyContent: 'space-evenly',
     alignItems: 'center',
     flex: 1,
     backgroundColor: 'white',
     height: Dimensions.get('window').height,
-  },
-  flexCenter: {
-    justifyContent: 'center',
-    alignItems: 'center',
-  },
-  image: {
-    height: 300,
-    width: 300,
   },
   heading: {
     fontSize: 25,
@@ -80,8 +85,5 @@ const styles = StyleSheet.create({
     color: 'black',
     textAlign: 'center',
     justifyContent: 'center',
-  },
-  MainHeadingContainer: {
-    marginBottom: 30,
   },
 });
