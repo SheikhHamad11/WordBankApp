@@ -1,149 +1,89 @@
-import {
-  View,
-  Text,
-  Button,
-  StyleSheet,
-  Image,
-  ScrollView,
-  Dimensions,
-} from 'react-native';
-import React, {useState} from 'react';
-import Icon from 'react-native-vector-icons/FontAwesome5';
+import {View, Text, StyleSheet, ScrollView, Dimensions} from 'react-native';
+import React, {useEffect, useMemo, useState} from 'react';
 import Circle from '../components/Circle';
+import {useSelector} from 'react-redux';
+import {
+  WordBankCategories,
+  WordBankHeading,
+} from '../Redux_Configuration/Selector';
 export default function Home({navigation}) {
-  const [angle, setangle] = useState();
+  const [index, setindex] = useState(0);
+  const [centerClick, setcenterClick] = useState(false);
+  const {heading, Category} = useSelector(
+    useMemo(
+      () => state => ({
+        heading: WordBankHeading(state),
+        Category: WordBankCategories(state, index),
+      }),
+      [index],
+    ),
+  );
+  const [angle, setangle] = useState(90);
+  useEffect(() => {
+    if (!centerClick) {
+      if (angle === 360 || angle === 0) {
+        setindex(0);
+      } else if (angle === 90) {
+        setindex(1);
+      } else if (angle === 180) {
+        setindex(2);
+      } else if (angle === 270) {
+        setindex(3);
+      }
+    } else {
+      navigate();
+    }
+  }, [angle, centerClick]);
+  const navigate = () => {
+    // console.log(`HOme index: ${index}`);
+    setcenterClick(false);
+    navigation.navigate('DetailPage', {index});
+  };
   return (
-    <ScrollView>
-      <View style={styles.flexContainer}>
-        <View style={{marginVertical: 30}}>
-          <Text style={styles.heading}>Paragraph Structure</Text>
-        </View>
-        <Circle angle={angle} setAngle={setangle} />
-
-        <View style={{marginTop: 20}}>
-          <Text style={styles.heading1}>1. Claim</Text>
-          <Text style={styles.heading2}>
-            Introduce the paragraph by making your point(this sentence directs
-            the rest of your paragraph)
-          </Text>
-        </View>
-
-        {/* <View style={{marginTop: 30}}>
-          <Text style={styles.heading1}>2. Justification</Text>
-          <Text style={styles.heading2}>
-            Unpack the controlling statement:Explain it and Analyze it.
-          </Text>
-        </View>
-        <View style={{marginTop: 30}}>
-          <Text style={styles.heading1}>3. Support</Text>
-          <Text style={styles.heading2}>
-            Use theory to analyse furthur,including referenced evidence and
-            examples
-          </Text>
-        </View>
-
-        <View style={{marginTop: 30}}>
-          <Text style={styles.heading1}>4. Implications</Text>
-          <Text style={styles.heading2}>
-            Identify the significance (and then link to the next point, which
-            may provide further backing or may even be a counter-argument)
-          </Text>
-        </View> */}
-
-        <View style={{marginTop: 30}}>
-          <Button
-            color={'green'}
-            style={styles.button}
-            onPress={() => {
-              navigation.navigate('ClaimPage');
-            }}
-            title="Go To ClaimPage"
-          />
-        </View>
-        <View style={{marginTop: 10}}>
-          <Button
-            color={'green'}
-            style={styles.button}
-            onPress={() => {
-              navigation.navigate('JustificationPage');
-            }}
-            title="Go To JustificationPage"
-          />
-        </View>
-
-        <View style={{marginTop: 10}}>
-          <Button
-            color={'green'}
-            style={styles.button}
-            onPress={() => {
-              navigation.navigate('SupportPage');
-            }}
-            title="Go To SupportPage"
-          />
-        </View>
-        <View style={{marginTop: 10}}>
-          <Button
-            color={'green'}
-            style={styles.button}
-            onPress={() => {
-              navigation.navigate('ImplicationsPage');
-            }}
-            title="Go To ImplicationsPage"
-          />
-        </View>
+    <View style={styles.flexContainer}>
+      <View>
+        <Text style={styles.heading}>{heading}</Text>
       </View>
-    </ScrollView>
+      <Circle
+        angle={angle}
+        setAngle={setangle}
+        setcenterClick={setcenterClick}
+      />
+
+      <View style={{height: 100}}>
+        <Text style={styles.heading1}>{Category.title}</Text>
+        <Text style={styles.description}>{Category.description}</Text>
+      </View>
+    </View>
   );
 }
 
 const styles = StyleSheet.create({
   flexContainer: {
-    // justifyContent: 'center',
+    paddingHorizontal: 20,
+    justifyContent: 'space-evenly',
     alignItems: 'center',
     flex: 1,
     backgroundColor: 'white',
     height: Dimensions.get('window').height,
   },
-  flexCenter: {
-    justifyContent: 'center',
-    alignItems: 'center',
-  },
-  image: {
-    height: 300,
-    width: 300,
-  },
   heading: {
-    fontSize: 30,
-    fontWeight: '900',
+    fontSize: 25,
+    fontWeight: 'bold',
     color: 'black',
   },
   heading1: {
-    fontSize: 25,
-    fontWeight: '900',
+    fontSize: 20,
+    fontWeight: 'bold',
     color: 'black',
     textAlign: 'center',
   },
-  heading2: {
+  description: {
     // marginHorizontal:25,
-    fontSize: 21,
+    fontSize: 18,
     // fontWeight: '900',
     color: 'black',
     textAlign: 'center',
     justifyContent: 'center',
-  },
-
-  h1: {
-    fontSize: 48,
-    fontWeight: 'bold',
-    color: 'black',
-  },
-
-  gallery: {
-    width: 200,
-    height: 200,
-    backgroundColor: 'gray',
-    borderRadius: 10,
-    borderWidth: 2,
-    borderColor: 'black',
   },
 });

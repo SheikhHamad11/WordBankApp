@@ -12,7 +12,7 @@ import {NavigationContainer} from '@react-navigation/native';
 import {createStackNavigator} from '@react-navigation/stack';
 import Home from '../screens/Home';
 import SplashScreen from 'react-native-splash-screen';
-import ClaimPage from '../screens/ClaimPage';
+import DetailPage from '../screens/DetailPage';
 import Icon from 'react-native-vector-icons/FontAwesome5';
 
 import Contact from '../screens/ContactPage';
@@ -71,13 +71,13 @@ export default function MyStack() {
               }}
             />
             <Stack.Screen
-              name="ClaimPage"
-              component={ClaimPage}
+              name="DetailPage"
+              component={DetailPage}
               options={{
                 headerShown: true,
                 headerTitleAlign: 'center',
                 headerTitle: 'WORDBANK',
-                headerShadowVisible:true,
+                headerShadowVisible: true,
                 headerRight: () => (
                   <View style={{marginEnd: 20}}>
                     <TouchableOpacity onPress={() => setModalVisible(true)}>

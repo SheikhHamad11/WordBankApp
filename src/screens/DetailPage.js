@@ -7,21 +7,48 @@ import {
   TouchableOpacity,
   ScrollView,
 } from 'react-native';
-import {Button, List} from 'react-native-paper';
-import {
-  SumUp,
-  titlesWithIds,
-  showContrast,
-  createSequence,
-  InsertReferenceWithIds,
-} from '../components/ListItems';
+import {List} from 'react-native-paper';
+import {useSelector} from 'react-redux';
+import {WordBankData} from '../Redux_Configuration/Selector';
 
-const YourComponent = () => {
+const YourComponent = ({route}) => {
   const [modalVisible, setModalVisible] = useState(false);
   const [modalContent, setModalContent] = useState('');
+  const {index} = route.params;
+  const data = useSelector(state => WordBankData(state, index));
+  // console.log(`Detail Page Index: ${index}`);
 
   const openModal = content => {
-    setModalContent(content);
+    const list = content.description.map((text, index) => {
+      const regex = new RegExp(content.title, 'i');
+
+      // Split the text using the regular expression
+      const parts = text.split(regex);
+      return (
+        <View key={index} style={styles.listItemContainer}>
+          <Text style={styles.listItemPointer}>{'\u25A0'}</Text>
+          <Text style={styles.listitemContent}>
+            {parts.map((part, i) => (
+              <>
+                {part}
+                {i < parts.length - 1 && (
+                  <Text style={styles.listItemBoldWord}>
+                    {part ? content.title.toLowerCase() : content.title}
+                  </Text>
+                )}
+              </>
+            ))}
+          </Text>
+        </View>
+      );
+    });
+    list.unshift(
+      <View>
+        <Text style={styles.moduleHeading}>{content.title}</Text>
+      </View>,
+    );
+
+    setModalContent(list);
     setModalVisible(true);
   };
 
@@ -30,74 +57,30 @@ const YourComponent = () => {
       <View style={styles.container}>
         <View>
           <View style={{marginTop: 10}}>
-            <Text style={styles.heading1}>1. Claim</Text>
-            <Text style={styles.heading2}>
-              Introduce the paragraph by making your point(this sentence directs
-              the rest of your paragraph)
-            </Text>
+            <Text style={styles.heading1}>{data.title}</Text>
+            <Text style={styles.heading2}>{data.description}</Text>
           </View>
 
           <List.AccordionGroup>
-            <List.Accordion
-              titleStyle={styles.buttonText}
-              title="CREATE SEQUENCE"
-              style={[styles.button, styles.button1]}
-              right={() => null}
-              id="1">
-              {createSequence.map((item, index) => (
-                <List.Item
-                  key={item.id}
-                  style={styles.listitem}
-                  title={item.title}
-                  onPress={() => openModal(item.title)}
-                />
-              ))}
-            </List.Accordion>
-            <List.Accordion
-              titleStyle={styles.buttonText}
-              title="SHOW CONTRAST"
-              style={[styles.button, styles.button2]}
-              right={() => null}
-              id="2">
-              {showContrast.map((item, index) => (
-                <List.Item
-                  key={item.id}
-                  style={styles.listitem}
-                  title={item.title}
-                  onPress={() => openModal(item.title)}
-                />
-              ))}
-            </List.Accordion>
-            <List.Accordion
-              titleStyle={styles.buttonText}
-              title="INSERT REFERENCE"
-              style={[styles.button, styles.button3]}
-              id="3"
-              right={() => null}>
-              {InsertReferenceWithIds.map((item, index) => (
-                <List.Item
-                  key={item.id}
-                  style={styles.listitem}
-                  title={item.title}
-                  onPress={() => openModal(item.title)}
-                />
-              ))}
-            </List.Accordion>
-            <List.Accordion
-              titleStyle={styles.buttonText}
-              title="SHOW CAUSE AND EFFECT"
-              style={[styles.button, styles.button4]}
-              id="4"
-              right={() => null}>
-              {titlesWithIds.map((item, index) => (
-                <List.Item
-                  key={item.id}
-                  style={styles.listitem}
-                  title={item.title}
-                  onPress={() => openModal(item.title)}
-                />
-              ))}
-            </List.Accordion>
+            {data.subCategories.map((item, ind) => (
+              <View key={ind} style={styles.button}>
+                <List.Accordion
+                  titleStyle={styles.buttonText}
+                  title={item.title.toUpperCase()}
+                  style={[{backgroundColor: item.color, borderRadius: 5}]}
+                  right={() => null}
+                  id={ind}>
+                  {item.data.map((innerItem, i) => (
+                    <List.Item
+                      key={i}
+                      style={styles.listitem}
+                      title={innerItem.title}
+                      onPress={() => openModal(innerItem)}
+                    />
+                  ))}
+                </List.Accordion>
+              </View>
+            ))}
           </List.AccordionGroup>
         </View>
 
@@ -112,9 +95,7 @@ const YourComponent = () => {
             activeOpacity={1}
             style={styles.modalContainer}
             onPress={() => setModalVisible(false)}>
-            <View style={styles.modalContent}>
-              <Text style={styles.modalText}>{modalContent}</Text>
-            </View>
+            <View style={styles.modalContent}>{modalContent}</View>
           </TouchableOpacity>
         </Modal>
       </View>
@@ -130,9 +111,9 @@ const styles = StyleSheet.create({
     padding: 20,
   },
   button: {
-    backgroundColor: 'lightblue',
     borderRadius: 5,
-    marginVertical: 5,
+    marginVertical: 7,
+    // width: 350,
   },
   buttonText: {
     color: 'white',
@@ -147,7 +128,7 @@ const styles = StyleSheet.create({
   },
   heading2: {
     marginVertical: 10,
-    fontSize: 21,
+    fontSize: 16,
     // fontWeight: '900',
     color: 'black',
     // textAlign:'center',
@@ -161,39 +142,19 @@ const styles = StyleSheet.create({
     flex: 1,
     justifyContent: 'center',
     alignItems: 'center',
-    backgroundColor: 'rgba(0,0,0,0.5)',
+    backgroundColor: 'rgba(0,0,0,0.3)',
   },
   modalContent: {
     backgroundColor: 'white',
     padding: 20,
     borderRadius: 10,
+    width: '75%',
   },
-  modalText: {
-    fontSize: 18,
-    textAlign: 'center',
-    color: 'black',
-  },
-  button: {
-    marginVertical: 7,
-    width: 350,
-    // padding: 20,
-    // color: 'white',
-    borderRadius: 5,
-    fontSize: 27,
-    fontWeight: '100',
-  },
-  button1: {
-    backgroundColor: '#548DD4',
-  },
-  button2: {
-    backgroundColor: '#76923D',
-  },
-  button3: {
-    backgroundColor: '#009180',
-  },
-  button4: {
-    backgroundColor: '#CD00FF',
-  },
+  moduleHeading: {color: 'black', fontSize: 18, fontWeight: 'bold'},
+  listItemContainer: {flexDirection: 'row'},
+  listItemPointer: {marginRight: 8, fontSize: 6, color: 'black', marginTop: 5},
+  listitemContent: {color: 'black'},
+  listItemBoldWord: {fontWeight: 'bold'},
 });
 
 export default YourComponent;
