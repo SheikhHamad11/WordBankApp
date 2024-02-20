@@ -15,12 +15,12 @@ export default function Home({navigation}) {
   return (
     <ScrollView>
       <View style={styles.flexContainer}>
-        <View style={{marginTop: 30}}>
+        <View style={{marginVertical: 30}}>
           <Text style={styles.heading}>Paragraph Structure</Text>
         </View>
         <Circle angle={angle} setAngle={setangle} />
 
-        <View style={{marginTop: 10}}>
+        <View style={{marginTop: 20}}>
           <Text style={styles.heading1}>1. Claim</Text>
           <Text style={styles.heading2}>
             Introduce the paragraph by making your point(this sentence directs
