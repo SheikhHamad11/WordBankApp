@@ -51,8 +51,8 @@ export default function Home({navigation}) {
       />
 
       <View style={{height: 100}}>
-        <Text style={styles.heading1}>{Category.title}</Text>
-        <Text style={styles.description}>{Category.description}</Text>
+        <Text style={styles.heading1}>{Category?.title}</Text>
+        <Text style={styles.description}>{Category?.description}</Text>
       </View>
     </View>
   );
