@@ -11,7 +11,7 @@ import {List} from 'react-native-paper';
 import {useSelector} from 'react-redux';
 import {WordBankData} from '../Redux_Configuration/Selector';
 
-const YourComponent = ({route}) => {
+export default DetailPage = ({route}) => {
   const [modalVisible, setModalVisible] = useState(false);
   const [modalContent, setModalContent] = useState('');
   const {index} = route.params;
@@ -128,8 +128,7 @@ const styles = StyleSheet.create({
   },
   heading2: {
     marginVertical: 10,
-    fontSize: 16,
-    // fontWeight: '900',
+    fontSize: 19,
     color: 'black',
     // textAlign:'center',
     justifyContent: 'center',
@@ -156,8 +155,6 @@ const styles = StyleSheet.create({
   listitemContent: {color: 'black'},
   listItemBoldWord: {fontWeight: 'bold'},
 });
-
-export default YourComponent;
 
 // import {View, Text, StyleSheet, ScrollView, Dimensions} from 'react-native';
 // import React, {useState} from 'react';

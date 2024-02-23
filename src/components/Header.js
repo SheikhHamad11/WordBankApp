@@ -32,7 +32,7 @@ const Header = ({modalVisible, setModalVisible}) => {
             <View style={{marginVertical: 4}}>
               <TouchableOpacity
                 onPress={() => Linking.openURL('http://www.wordbank.org.uk/')}>
-                <Icon name="globe-asia" size={30} color="#0274B3" />
+                <Icon name="globe-asia" size={35} color="#0274B3" />
               </TouchableOpacity>
             </View>
             <View style={{marginVertical: 4}}>
@@ -41,16 +41,18 @@ const Header = ({modalVisible, setModalVisible}) => {
                   setModalVisible(false);
                   navigation.navigate('Contact');
                 }}>
-                <Icon name="envelope" size={30} color="#0274B3" />
+                <Icon name="envelope" size={35} color="#0274B3" />
               </TouchableOpacity>
             </View>
-            <View style={{marginVertical: 4}}>
+            <View style={{margin: 4}}>
               <TouchableOpacity
                 onPress={() => {
                   setModalVisible(false);
                   navigation.navigate('AboutPage');
                 }}>
-                <Icon name="file-alt" size={30} color="#0274B3" />
+                <Icon name="file-alt" size={35} color="#0274B3" />
+                
+                {/* <Icon icon="fa-file-alt" size={35} color="#0274B3" /> */}
               </TouchableOpacity>
             </View>
             {/* <Button title="Close Modal" onPress={closeModal} /> */}
