@@ -31,7 +31,7 @@ export default function MyStack() {
   useEffect(() => {
     setTimeout(() => {
       SplashScreen.hide();
-    }, 2000);
+    }, 500);
   }, []);
   return (
     <>

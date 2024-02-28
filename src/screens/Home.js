@@ -1,6 +1,6 @@
 import {View, Text, StyleSheet, ScrollView, Dimensions} from 'react-native';
 import React, {useEffect, useMemo, useState} from 'react';
-import Circle from '../components/Circle';
+import Circle from '../components/Circle2';
 import {useSelector} from 'react-redux';
 import {
   WordBankCategories,
@@ -18,7 +18,7 @@ export default function Home({navigation}) {
       [index],
     ),
   );
-  const [angle, setangle] = useState(90);
+  const [angle, setangle] = useState(0);
   useEffect(() => {
     if (!centerClick) {
       if (angle === 360 || angle === 0) {
