@@ -1,11 +1,11 @@
 import {createSlice} from '@reduxjs/toolkit';
 import data from '../data/data.json';
 
-const WordBankSlice = createSlice({
-  name: 'WordBank',
+const newProjectSlice = createSlice({
+  name: 'newProject',
   initialState: data,
 
   reducers: {},
 });
 
-export default WordBankSlice;
+export default newProjectSlice;

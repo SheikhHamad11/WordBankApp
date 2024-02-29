@@ -1,9 +1,9 @@
 import {configureStore} from '@reduxjs/toolkit';
-import WordBankSlice from './Reducer';
+import newProjectSlice from './Reducer';
 
 const store = configureStore({
   reducer: {
-    WordBank: WordBankSlice.reducer,
+    newProject: newProjectSlice.reducer,
   },
 });
 export default store;

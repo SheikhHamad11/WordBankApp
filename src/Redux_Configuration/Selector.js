@@ -1,26 +1,29 @@
 import {createSelector} from 'reselect';
-export const WordBankHeadingfunc = state => state.WordBank.heading;
-export const WordBankContactfunc = state => state.WordBank.contact;
-export const WordBankaboutfunc = state => state.WordBank.about;
-export const WordBankDatafunc = (state, index) =>  ({
-    ...state.WordBank.categories[index],
-    subCategories: [...state.WordBank.subcategories[index]],
-  });
-export const WordBankCategoriesfunc = (state, index = 0) => {
-  return state.WordBank?.categories[index];
+export const newProjectHeadingfunc = state => state.newProject.heading;
+export const newProjectContactfunc = state => state.newProject.contact;
+export const newProjectaboutfunc = state => state.newProject.about;
+export const newProjectDatafunc = (state, index) => ({
+  ...state.newProject.categories[index],
+  subCategories: [...state.newProject.subcategories[index]],
+});
+export const newProjectCategoriesfunc = (state, index = 0) => {
+  return state.newProject?.categories[index];
 };
 
-export const WordBankContact = createSelector(
-  WordBankContactfunc,
+export const newProjectContact = createSelector(
+  newProjectContactfunc,
   data => data,
 );
-export const WordBankAbout = createSelector(WordBankaboutfunc, data => data);
-export const WordBankData = createSelector(WordBankDatafunc, data => data);
-export const WordBankHeading = createSelector(
-  WordBankHeadingfunc,
+export const newProjectAbout = createSelector(
+  newProjectaboutfunc,
   data => data,
 );
-export const WordBankCategories = createSelector(
-  WordBankCategoriesfunc,
+export const newProjectData = createSelector(newProjectDatafunc, data => data);
+export const newProjectHeading = createSelector(
+  newProjectHeadingfunc,
+  data => data,
+);
+export const newProjectCategories = createSelector(
+  newProjectCategoriesfunc,
   data => data,
 );

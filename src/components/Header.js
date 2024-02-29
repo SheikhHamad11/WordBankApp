@@ -31,7 +31,9 @@ const Header = ({modalVisible, setModalVisible}) => {
           <View style={styles.modalContent}>
             <View style={{marginVertical: 4}}>
               <TouchableOpacity
-                onPress={() => Linking.openURL('http://www.wordbank.org.uk/')}>
+                onPress={() =>
+                  Linking.openURL('http://www.newProject.org.uk/')
+                }>
                 <Icon name="globe-asia" size={35} color="#0274B3" />
               </TouchableOpacity>
             </View>
@@ -51,7 +53,7 @@ const Header = ({modalVisible, setModalVisible}) => {
                   navigation.navigate('AboutPage');
                 }}>
                 <Icon name="file-alt" size={35} color="#0274B3" />
-                
+
                 {/* <Icon icon="fa-file-alt" size={35} color="#0274B3" /> */}
               </TouchableOpacity>
             </View>

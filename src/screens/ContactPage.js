@@ -3,7 +3,7 @@ import React from 'react';
 
 const Contact = () => {
   const openEmailLink = () => {
-    Linking.openURL(`mailto:contact@www.wordbank.org.uk`);
+    Linking.openURL(`mailto:contact@www.newProject.org.uk`);
   };
   return (
     <View style={styles.flexContainer}>
@@ -11,7 +11,7 @@ const Contact = () => {
         <Text style={styles.heading1}>Contact</Text>
         <Text style={styles.heading2}>To contact,pease email us at:</Text>
         <TouchableOpacity onPress={openEmailLink}>
-          <Text style={styles.heading3}>contact@www.wordbank.org.uk</Text>
+          <Text style={styles.heading3}>contact@www.newProject.org.uk</Text>
         </TouchableOpacity>
       </View>
     </View>
