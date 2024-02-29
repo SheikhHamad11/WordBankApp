@@ -153,7 +153,7 @@ const Circle = ({angle, setAngle, setcenterClick}) => {
   const radius = (Dimensions.get('window').width - 80) / 2;
   const center = {
     x: (Dimensions.get('window').width - 50) / 2,
-    y: Dimensions.get('window').width - 15,
+    y: (44.24637062339881 / 100) * Dimensions.get('window').height,
   };
 
   useEffect(() => {
@@ -169,6 +169,12 @@ const Circle = ({angle, setAngle, setcenterClick}) => {
       rotateAnimation.start();
     }
   }, [rotation, touchResponce]);
+
+  useEffect(() => {
+    const height = (Dimensions.get('window').height - 98) / 2;
+    const percent = (height * 100) / Dimensions.get('window').height;
+    console.log(percent);
+  }, []);
 
   const calculateDynamicOffset = (pageX, pageY) => {
     // You can customize this function to calculate the dynamic offset based on your requirements
