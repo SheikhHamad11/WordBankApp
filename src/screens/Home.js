@@ -21,6 +21,7 @@ export default function Home({navigation}) {
       [index],
     ),
   );
+<<<<<<< HEAD
 
   // Function to store data in local storage
   const storeDataLocally = async data => {
@@ -50,16 +51,19 @@ export default function Home({navigation}) {
     }
   };
   const [angle, setangle] = useState(90);
+=======
+  const [angle, setangle] = useState(0);
+>>>>>>> 1e70226e65360686cd46d8b4e244bd14c7bc6dd0
   useEffect(() => {
     if (!centerClick) {
-      if (angle === 360 || angle === 0) {
+      if (angle > 143 && angle <= 220) {
         setindex(0);
-      } else if (angle === 90) {
-        setindex(1);
-      } else if (angle === 180) {
-        setindex(2);
-      } else if (angle === 270) {
+      } else if (angle > 54 && angle <= 138) {
         setindex(3);
+      } else if ((angle > 321 && angle <= 360) || (angle >= 0 && angle <= 48)) {
+        setindex(2);
+      } else if (angle > 227 && angle < 315) {
+        setindex(1);
       }
     } else {
       navigate();
@@ -89,8 +93,8 @@ export default function Home({navigation}) {
       />
 
       <View style={{height: 100}}>
-        <Text style={styles.heading1}>{Category.title}</Text>
-        <Text style={styles.description}>{Category.description}</Text>
+        <Text style={styles.heading1}>{Category?.title}</Text>
+        <Text style={styles.description}>{Category?.description}</Text>
       </View>
     </View>
   );
