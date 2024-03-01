@@ -40,21 +40,23 @@ export default function Home({navigation}) {
     navigation.navigate('DetailPage', {index});
   };
   return (
-    <View style={styles.flexContainer}>
-      <View>
-        <Text style={styles.heading}>{heading}</Text>
-      </View>
-      <Circle
-        angle={angle}
-        setAngle={setangle}
-        setcenterClick={setcenterClick}
-      />
+    <ScrollView>
+      <View style={styles.flexContainer}>
+        <View>
+          <Text style={styles.heading}>{heading}</Text>
+        </View>
+        <Circle
+          angle={angle}
+          setAngle={setangle}
+          setcenterClick={setcenterClick}
+        />
 
-      <View style={{height: 100}}>
-        <Text style={styles.heading1}>{Category?.title}</Text>
-        <Text style={styles.description}>{Category?.description}</Text>
+        <View style={{height: 100}}>
+          <Text style={styles.heading1}>{Category?.title}</Text>
+          <Text style={styles.description}>{Category?.description}</Text>
+        </View>
       </View>
-    </View>
+    </ScrollView>
   );
 }
 
@@ -65,7 +67,7 @@ const styles = StyleSheet.create({
     alignItems: 'center',
     flex: 1,
     backgroundColor: 'white',
-    height: Dimensions.get('window').height,
+    minHeight: Dimensions.get('window').height,
   },
   heading: {
     fontSize: 30,

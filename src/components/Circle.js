@@ -9,6 +9,9 @@ import {
 } from 'react-native';
 
 const Circle = ({angle, setAngle, setcenterClick}) => {
+  const circleLayout = useRef(null);
+  const [circleCenter, setCircleCenter] = useState({centerX: 0, centerY: 0});
+  const circleRef = useRef(null);
   const [DragRotaition] = useState(
     PanResponder.create({
       onStartShouldSetPanResponder: () => true,
@@ -48,11 +51,16 @@ const Circle = ({angle, setAngle, setcenterClick}) => {
         // Get the screen dimensions
         const screenWidth = Dimensions.get('window').width;
         const screenHeight = Dimensions.get('window').height;
+        // console.log(circleLayout.current);
 
         // Normalize pageX and pageY values
-        const normalizedX = pageX / screenWidth;
-        const normalizedY = pageY / screenHeight;
+        const normalizedX =
+          (pageX - circleLayout.current.x) / circleLayout.current.width;
+        const normalizedY =
+          (pageY - circleLayout.current.y) / circleLayout.current.height;
         console.log(`normalizedX: ${normalizedX}, normalizedY: ${normalizedY}`);
+        const mainCirclePosition = circleRef.current.measure();
+        console.log(circleRef.current.measure());
 
         // Define regions based on normalized values
         const region1 =
@@ -135,10 +143,10 @@ const Circle = ({angle, setAngle, setcenterClick}) => {
         const angleDeg = (angleRad * 180) / Math.PI;
 
         // Adjust the angle to be positive and between 0 and 360
-        const dynamicOffset = calculateDynamicOffset(moveX, moveY);
+        // const dynamicOffset = calculateDynamicOffset(moveX, moveY);
         const positiveAngle = (angleDeg + 360) % 360;
         console.log(
-          `dynamicoffset: ${dynamicOffset} moveX: ${moveX} moveY: ${moveY} angle: ${positiveAngle}`,
+          `moveX: ${moveX} moveY: ${moveY} angle: ${positiveAngle} dx:${dx} dy:${dy}`,
         );
         rotation.setValue(positiveAngle);
         setAngle(positiveAngle);
@@ -152,8 +160,8 @@ const Circle = ({angle, setAngle, setcenterClick}) => {
   const [touchResponce, setTouchResponce] = useState(0);
   const radius = (Dimensions.get('window').width - 80) / 2;
   const center = {
-    x: (Dimensions.get('window').width - 50) / 2,
-    y: (44.24637062339881 / 100) * Dimensions.get('window').height,
+    x: circleCenter.centerX - 25,
+    y: circleCenter.centerY - 15.18,
   };
 
   useEffect(() => {
@@ -171,9 +179,18 @@ const Circle = ({angle, setAngle, setcenterClick}) => {
   }, [rotation, touchResponce]);
 
   useEffect(() => {
-    const height = (Dimensions.get('window').height - 98) / 2;
-    const percent = (height * 100) / Dimensions.get('window').height;
-    console.log(percent);
+    const height = Dimensions.get('window').height - 90;
+    const percent = (90 * 100) / Dimensions.get('window').height;
+    console.log(
+      `BeforeX: ${(Dimensions.get('window').width - 50) / 2} BeforeY:${
+        (Dimensions.get('window').height -
+          (10.567890691716482 * Dimensions.get('window').height) / 100) /
+        2
+      }`,
+    );
+    console.log(
+      `AfterX: ${circleCenter.centerX} AfterY:${circleCenter.centerY}`,
+    );
   }, []);
 
   const calculateDynamicOffset = (pageX, pageY) => {
@@ -236,10 +253,21 @@ const Circle = ({angle, setAngle, setcenterClick}) => {
 
     return [styles.triangle, triangleStyle, triangleBasePosition];
   };
-
+  const handleCircleLayout = event => {
+    const {x, y, width, height} = event.nativeEvent.layout;
+    const centerX = x + width / 2;
+    const centerY = y + height / 2;
+    setCircleCenter({centerX, centerY});
+    console.log(x, y, width, height, centerX, centerY);
+    circleLayout.current = {x, y, width, height, centerX, centerY};
+  };
   return (
     <>
-      <View style={styles.MainCircle} {...TouchResponder.panHandlers}>
+      <View
+        style={styles.MainCircle}
+        onLayout={handleCircleLayout}
+        ref={circleRef}
+        {...TouchResponder.panHandlers}>
         <View style={styles.topinnerCircle}>
           <Animated.Image
             source={require('../Images/wordbank.png')}
