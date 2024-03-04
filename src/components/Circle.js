@@ -19,8 +19,10 @@ const Circle = ({angle, setAngle, setcenterClick}) => {
         const {moveX, moveY} = gestureState;
 
         // Calculate the displacement from the center
-        const dx = moveX - center.x;
-        const dy = moveY - center.y;
+        const dx = moveX - circleLayout.current.centerX;
+        const dy = moveY - circleLayout.current.centerY;
+        // const dx = moveX - center.x;
+        // const dy = moveY - center.y;
 
         // Calculate the angle in radians
         const angleRad = Math.atan2(dy, dx);
@@ -32,7 +34,7 @@ const Circle = ({angle, setAngle, setcenterClick}) => {
         const dynamicOffset = calculateDynamicOffset(moveX, moveY);
         const positiveAngle = (angleDeg + 360) % 360;
         console.log(
-          `dynamicoffset: ${dynamicOffset} moveX: ${moveX} moveY: ${moveY} angle: ${positiveAngle}`,
+          `dynamicoffset: ${dynamicOffset} moveX: ${moveX} moveY: ${moveY} angle: ${positiveAngle} `,
         );
         rotation.setValue(positiveAngle);
         setAngle(positiveAngle);
@@ -54,13 +56,9 @@ const Circle = ({angle, setAngle, setcenterClick}) => {
         // console.log(circleLayout.current);
 
         // Normalize pageX and pageY values
-        const normalizedX =
-          (pageX - circleLayout.current.x) / circleLayout.current.width;
-        const normalizedY =
-          (pageY - circleLayout.current.y) / circleLayout.current.height;
+        const normalizedX = pageX / screenWidth;
+        const normalizedY = pageY / screenHeight;
         console.log(`normalizedX: ${normalizedX}, normalizedY: ${normalizedY}`);
-        const mainCirclePosition = circleRef.current.measure();
-        console.log(circleRef.current.measure());
 
         // Define regions based on normalized values
         const region1 =
@@ -105,8 +103,10 @@ const Circle = ({angle, setAngle, setcenterClick}) => {
         } else if (regionMiddle) {
           setcenterClick(true);
         } else {
-          const dx = pageX - center.x;
-          const dy = pageY - center.y;
+          // const dx = pageX - center.x;
+          // const dy = pageY - center.y;
+          const dx = pageX - circleLayout.current.centerX;
+          const dy = pageY - circleLayout.current.centerY;
 
           // Calculate the angle in radians
           const angleRad = Math.atan2(dy, dx);
@@ -133,8 +133,9 @@ const Circle = ({angle, setAngle, setcenterClick}) => {
         const {moveX, moveY} = gestureState;
 
         // Calculate the displacement from the center
-        const dx = moveX - center.x;
-        const dy = moveY - center.y;
+        const dx = moveX - circleLayout.current.centerX;
+        const dy = moveY - circleLayout.current.centerY;
+        console.log('CenterX:', circleLayout.current.centerX);
 
         // Calculate the angle in radians
         const angleRad = Math.atan2(dy, dx);
@@ -158,10 +159,12 @@ const Circle = ({angle, setAngle, setcenterClick}) => {
   );
   const rotation = useRef(new Animated.Value(0)).current;
   const [touchResponce, setTouchResponce] = useState(0);
-  const radius = (Dimensions.get('window').width - 80) / 2;
+  const radius = circleCenter.radius
+    ? circleCenter.radius - 27
+    : (Dimensions.get('window').width - 80) / 2;
   const center = {
-    x: circleCenter.centerX - 25,
-    y: circleCenter.centerY - 15.18,
+    x: circleCenter.centerX,
+    y: circleCenter.centerY,
   };
 
   useEffect(() => {
@@ -191,7 +194,8 @@ const Circle = ({angle, setAngle, setcenterClick}) => {
     console.log(
       `AfterX: ${circleCenter.centerX} AfterY:${circleCenter.centerY}`,
     );
-  }, []);
+    console.log(`CenterX: ${center.x} CenterY:${center.y}`);
+  }, [circleCenter]);
 
   const calculateDynamicOffset = (pageX, pageY) => {
     // You can customize this function to calculate the dynamic offset based on your requirements
@@ -255,9 +259,10 @@ const Circle = ({angle, setAngle, setcenterClick}) => {
   };
   const handleCircleLayout = event => {
     const {x, y, width, height} = event.nativeEvent.layout;
-    const centerX = x + width / 2;
-    const centerY = y + height / 2;
-    setCircleCenter({centerX, centerY});
+    const centerX = x + width / 2 - 25;
+    const centerY = y + height / 2 - 15.18;
+    const radius = width / 2;
+    setCircleCenter({centerX, centerY, radius});
     console.log(x, y, width, height, centerX, centerY);
     circleLayout.current = {x, y, width, height, centerX, centerY};
   };
