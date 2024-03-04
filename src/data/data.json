@@ -3,11 +3,11 @@
   "contact": {
     "heading": "Contact",
     "contents": "To contact, please email at:",
-    "link": "mailto:contact@www.wordbank.org.uk"
+    "link": "mailto:contact@www.newProject.org.uk"
   },
 
   "about": {
-    "heading": "About WORDBANK",
+    "heading": "About newProject",
     "contents": [
       "During academic writing, authors always require a variety of words and phrases in order to avoid repetition and overuse. Having a variety of words in any piece of academic writing adds flow, strength, readability, professionalism and makes the work easy to comprehend and follow.",
       "This smartphone application offers authors a large variety of words to choose from. It opens with a paragraph model and displays the four stages that constitute a typical paragraph. Tapping each one of these stages offers a list of words and phrases relevant to that stage. Each of these, in turn, when tapped provide a list of examples of their use.",

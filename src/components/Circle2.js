@@ -225,7 +225,7 @@ const Circle = ({angle, setAngle, setcenterClick}) => {
       <Animated.View style={getTriangleStyle()} />
       <View style={styles.topinnerCircle}>
         <Animated.Image
-          source={require('../Images/wordbank.png')}
+          source={require('../Images/newProject.png')}
           style={styles.imgStyle}
           {...panResponder.panHandlers}
         />

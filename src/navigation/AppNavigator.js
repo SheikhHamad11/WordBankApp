@@ -51,7 +51,7 @@ export default function MyStack() {
               options={{
                 headerShown: true,
                 headerTitleAlign: 'center',
-                headerTitle: 'WORDBANK',
+                headerTitle: 'newProject',
               }}
             />
             <Stack.Screen
@@ -60,7 +60,7 @@ export default function MyStack() {
               options={{
                 headerShown: true,
                 headerTitleAlign: 'center',
-                headerTitle: 'WORDBANK',
+                headerTitle: 'newProject',
               }}
             />
             <Stack.Screen
@@ -76,7 +76,7 @@ export default function MyStack() {
               options={{
                 headerShown: true,
                 headerTitleAlign: 'center',
-                headerTitle: 'WORDBANK',
+                headerTitle: 'newProject',
                 headerShadowVisible: true,
                 headerRight: () => (
                   <View style={{marginEnd: 20}}>
@@ -93,7 +93,7 @@ export default function MyStack() {
               options={{
                 headerShown: true,
                 headerTitleAlign: 'center',
-                headerTitle: 'WORDBANK',
+                headerTitle: 'newProject',
                 headerRight: () => (
                   <View style={{marginEnd: 20}}>
                     <TouchableOpacity onPress={() => setModalVisible(true)}>
@@ -109,7 +109,7 @@ export default function MyStack() {
               options={{
                 headerShown: true,
                 headerTitleAlign: 'center',
-                headerTitle: 'WORDBANK',
+                headerTitle: 'newProject',
                 headerRight: () => (
                   <View style={{marginEnd: 20}}>
                     <TouchableOpacity onPress={() => setModalVisible(true)}>
@@ -125,7 +125,7 @@ export default function MyStack() {
               options={{
                 headerShown: true,
                 headerTitleAlign: 'center',
-                headerTitle: 'WORDBANK',
+                headerTitle: 'newProject',
                 headerRight: () => (
                   <View style={{marginEnd: 20}}>
                     <TouchableOpacity onPress={() => setModalVisible(true)}>

@@ -32,9 +32,15 @@ const StoreData = createAsyncThunk('slice/fetchData', async () => {
   }
 });
 
+<<<<<<< HEAD
+const newProjectSlice = createSlice({
+  name: 'newProject',
+  initialState: data,
+=======
 const WordBankSlice = createSlice({
   name: 'WordBank',
   initialState: {data: {}}, // Adjust your initial state accordingly
+>>>>>>> 1e70226e65360686cd46d8b4e244bd14c7bc6dd0
 
   reducers: {},
   extraReducers: builder => {
@@ -52,5 +58,9 @@ const WordBankSlice = createSlice({
   },
 });
 
+<<<<<<< HEAD
+export default newProjectSlice;
+=======
 export default WordBankSlice;
 export {StoreData}; // Export the action creator
+>>>>>>> 1e70226e65360686cd46d8b4e244bd14c7bc6dd0

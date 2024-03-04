@@ -9,13 +9,13 @@ import {
 } from 'react-native';
 import {List} from 'react-native-paper';
 import {useSelector} from 'react-redux';
-import {WordBankData} from '../Redux_Configuration/Selector';
+import {newProjectData} from '../Redux_Configuration/Selector';
 
 export default DetailPage = ({route}) => {
   const [modalVisible, setModalVisible] = useState(false);
   const [modalContent, setModalContent] = useState('');
   const {index} = route.params;
-  const data = useSelector(state => WordBankData(state, index));
+  const data = useSelector(state => newProjectData(state, index));
   // console.log(`Detail Page Index: ${index}`);
 
   const openModal = content => {
