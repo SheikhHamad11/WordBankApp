@@ -9,7 +9,7 @@ const Contact = () => {
     <View style={styles.flexContainer}>
       <View style={{marginTop: 30}}>
         <Text style={styles.heading1}>Contact</Text>
-        <Text style={styles.heading2}>To contact,pease email us at:</Text>
+        <Text style={styles.heading2}>To contact, please email us at:</Text>
         <TouchableOpacity onPress={openEmailLink}>
           <Text style={styles.heading3}>contact@www.newProject.org.uk</Text>
         </TouchableOpacity>

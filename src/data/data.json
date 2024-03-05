@@ -49,99 +49,99 @@
             "title": "Firstly",
             "caption": "",
             "description": [
-              "It has been shown, firstly, that the missionary journeys cannot...",
-              "Firstly, the conception of \"right\" and \"wrong\" was unfounded...",
-              "The first serious discussions and analyses of X emerged during the 1970s with ...",
-              "Xs were reported in the first studies of Y (e.g., Smith, 1977; Smith and Patel, 1977).",
-              "Firstly, this paper will examine...",
-              "Firstly, it is important to..."
+              "It has been shown, \b firstly, that the missionary journeys cannot...",
+              " \b Firstly, the conception of \"right\" and \"wrong\" was unfounded...",
+              "The \b first serious discussions and analyses of X emerged during the 1970s with ...",
+              "Xs were reported in the \b first studies of Y (e.g., Smith, 1977; Smith and Patel, 1977).",
+              " \b Firstly, this paper will examine...",
+              " \b Firstly, it is important to..."
             ]
           },
           {
             "title": "Secondly",
             "caption": "",
             "description": [
-              "Secondly, this research fails to illustrate...",
-              "Secondly, it is important to note...",
-              "Secondly, this essay focuses on..."
+              " \b Secondly, this research fails to illustrate...",
+              " \b Secondly, it is important to note...",
+              " \b Secondly, this essay focuses on..."
             ]
           },
           {
             "title": "Lastly",
             "caption": "",
             "description": [
-              "Lastly, I would like to remind you that smoking is not allowed.",
-              "Lastly, the authors state that the impact on the treatment group was...",
-              "And lastly, the final departure of the Great Emperor from his heroic army is presented."
+              " \b Lastly, I would like to remind you that smoking is not allowed.",
+              " \b Lastly, the authors state that the impact on the treatment group was...",
+              "And  \b lastly, the final departure of the Great Emperor from his heroic army is presented."
             ]
           },
           {
             "title": "To begin with",
             "caption": "",
             "description": [
-              "To begin with, Buber (1987) identified...",
-              "This paper begins by … It will then go on to...",
-              "To begin with, it is important to highlight the differences between…"
+              "\b To \b begin \b with, Buber (1987) identified...",
+              "This paper \b begins by … It will then go on to...",
+              "\b To \b begin \b with, it is important to highlight the differences between…"
             ]
           },
           {
             "title": "In addition",
             "caption": "",
             "description": [
-              "He asked if he might record the interview in addition to taking notes...",
-              "In addition, more than one billion of the world...",
-              "In addition to the four Dawkins, there was Pumpkin Green..."
+              "He asked if he might record the interview \b  in \b  addition to taking notes...",
+              "In  \b  addition, more than one billion of the world...",
+              "In  \b  addition to the four Dawkins, there was Pumpkin Green..."
             ]
           },
           {
             "title": "Moreover",
             "caption": "",
             "description": [
-              "Moreover, these findings indicate the need for further research...",
-              "He believed, moreover, that natural law and positive law moved on almost constant and immutable parallel lines.",
-              "Moreover, the significance of.... is important to discuss."
+              "\b Moreover, these findings indicate the need for further research...",
+              "He believed, \b moreover, that natural law and positive law moved on almost constant and immutable parallel lines.",
+              "\b Moreover, the significance of.... is important to discuss."
             ]
           },
           {
             "title": "Consequently",
             "caption": "",
             "description": [
-              "The peculiarities of structure which we encounter consequently support the view...",
-              "Consequently, the negotiations were suspended...",
-              "As a consequence, it can be suggested..."
+              "The peculiarities of structure which we encounter \b consequently support the view...",
+              "\b Consequently, the negotiations were suspended...",
+              "As a \b consequence, it can be suggested..."
             ]
           },
           {
             "title": "Furthermore",
             "caption": "",
             "description": [
-              "She won the race, and furthermore, she established a new world record.",
-              "Furthermore, it could be suggested…",
-              "Furthermore, it is clear that..."
+              "She won the race, and \b furthermore, she established a new world record.",
+              "\b Furthermore, it could be suggested…",
+              "\b Furthermore, it is clear that..."
             ]
           },
           {
             "title": "Subsequently",
             "caption": "",
             "description": [
-              "It may subsequently be suggested that…",
-              "He was taken prisoner at the battle of Tinchebrai in 1106, but was subsequently released."
+              "It may \b subsequently be suggested that…",
+              "He was taken prisoner at the battle of Tinchebrai in 1106, but was \b subsequently released."
             ]
           },
           {
             "title": "Regardless of",
             "caption": "",
             "description": [
-              "Regardless of blood glucose concentrations, glucose molecules must first pass through cell membranes via specialized channel proteins in order to be metabolized inside the cell...",
-              "Regardless of this criticism, it can be argued that… achieves the following goals…"
+              "\b Regardless \b of blood glucose concentrations, glucose molecules must first pass through cell membranes via specialised channel proteins in order to be metabolised inside the cell...",
+              "\b Regardless of this criticism, it can be argued that… achieves the following goals…"
             ]
           },
           {
             "title": "Despite",
             "caption": "",
             "description": [
-              "There was compassion in her sparkling gaze despite the gentle humor in her voice.",
-              "Despite being advised not to work due to illness, she continued to do so at her own will."
+              "There was compassion in her sparkling gaze \b despite the gentle humour in her voice.",
+              "\b Despite being advised not to work due to illness, she continued to do so at her own will."
             ]
           }
         ],
@@ -154,86 +154,86 @@
             "title": "On the other hand",
             "caption": "",
             "description": [
-              "On the other hand, no study has examined...",
-              "Increasing the heart rate may increase cardiac output. On the other hand, slowing the heart rate may also improve, cardiac efficiency by allowing time for the heart chambers to fill."
+              "\b On \b the \b other \b hand, no study has examined...",
+              "Increasing the heart rate may increase cardiac output. \b On \b the \b other \b hand, slowing the heart rate may also improve, cardiac efficiency by allowing time for the heart chambers to fill."
             ]
           },
           {
             "title": "Besides",
             "caption": "",
             "description": [
-              "Besides indicating a correlation between X and Y, the data suggest that..."
+              "\b Besides indicating a correlation between X and Y, the data suggest that..."
             ]
           },
           {
             "title": "Alternatively",
             "caption": "",
             "description": [
-              "Alternatively, the data could be viewed as being indicative of...",
-              "An alternative perspective..."
+              "\b Alternatively, the data could be viewed as being indicative of...",
+              "An \b alternative perspective..."
             ]
           },
           {
             "title": "In spite of",
             "caption": "",
             "description": [
-              "In spite of this, the findings proved problematic",
-              "The social model of disability remains integral to disability studies research, in spite of the previous discussion of its limitations…",
-              "In spite of much new knowledge about the role of..."
+              "\b In \b spite \b of this, the findings proved problematic",
+              "The social model of disability remains integral to disability studies research, \b in \b spite \b of the previous discussion of its limitations…",
+              "\b In \b spite \b of much new knowledge about the role of..."
             ]
           },
           {
             "title": "Despite",
             "caption": "",
             "description": [
-              "Despite the presence of ATP inside the cell, sufficient free calcium ions are also needed in order to facilitate muscle contraction",
-              "Despite these methodological limitations, the approach is justifiable on the grounds that...",
-              "Despite these findings, there has been little progress in..."
+              "\b Despite the presence of ATP inside the cell, sufficient free calcium ions are also needed in order to facilitate muscle contraction",
+              "\b Despite these methodological limitations, the approach is justifiable on the grounds that...",
+              "\b Despite these findings, there has been little progress in..."
             ]
           },
           {
             "title": "Although",
             "caption": "",
             "description": [
-              "Although, it is important to consider...",
-              "Although exclusion of X did not ..., these results should be interpreted with caution.",
-              "Although findings from more recent research have shown that..."
+              "\b Although, it is important to consider...",
+              "\b Although exclusion of X did not ..., these results should be interpreted with caution.",
+              "\b Although findings from more recent research have shown that..."
             ]
           },
           {
             "title": "Notwithstanding",
             "caption": "",
             "description": [
-              "Notwithstanding these weaknesses, the argument has some merit...",
-              "Notwithstanding these restrictions, the research suggests that..."
+              "\b Notwithstanding these weaknesses, the argument has some merit...",
+              "\b Notwithstanding these restrictions, the research suggests that..."
             ]
           },
           {
             "title": "Nevertheless",
             "caption": "",
             "description": [
-              "Nevertheless, further research is necessary",
-              "Their argument, nevertheless, made a significant contribution to the development of...",
-              "Nevertheless, the study has not escaped criticism..."
+              "\b Nevertheless, further research is necessary",
+              "Their argument, \b nevertheless, made a significant contribution to the development of...",
+              "\b Nevertheless, the study has not escaped criticism..."
             ]
           },
           {
             "title": "However",
             "caption": "",
             "description": [
-              "However, this theory does not fully explain why ...",
-              "However, there is an inconsistency with this argument ...",
-              "A serious weakness with this argument, however, is that ...",
-              "One question that needs to be asked, however, is whether..."
+              "\b However, this theory does not fully explain why ...",
+              "\b However, there is an inconsistency with this argument ...",
+              "A serious weakness with this argument, \b however, is that ...",
+              "One question that needs to be asked, \b however, is whether..."
             ]
           },
           {
             "title": "Nonetheless",
             "caption": "",
             "description": [
-              "The study was long but, nonetheless, informative and thought provoking.",
-              "The problems are not serious. Nonetheless, they must be acknowledged",
-              "Although this essay has explored the negative aspects of... it is nonetheless acknowledged that..."
+              "The study was long but, \b nonetheless, informative and thought provoking.",
+              "The problems are not serious. \b Nonetheless, they must be acknowledged",
+              "Although this essay has explored the negative aspects of... it is \b nonetheless acknowledged that..."
             ]
           }
         ],
@@ -246,90 +246,90 @@
             "title": "...pinpoints",
             "caption": "",
             "description": [
-              "Smith (2016) pinpoints the problems with...",
-              "Pinpointing the problems addressed by Smith (2016)..."
+              "Smith (2016) \b pinpoints the problems with...",
+              "\b Pinpointing the problems addressed by Smith (2016)..."
             ]
           },
           {
             "title": "...opines that...",
             "caption": "",
             "description": [
-              "Smith opines that social theory is integral when examining..."
+              "Smith \b opines \b that social theory is integral when examining..."
             ]
           },
           {
             "title": "...maintains that...",
             "caption": "",
             "description": [
-              "Peters (2010, p.1) maintains that the most important factor with regards to...",
-              "Even with the contravening evidence, Smith (2016) maintains that..."
+              "Peters (2010, p.1) \b maintains \b that the most important factor with regards to...",
+              "Even with the contravening evidence, Smith (2016) \b maintains \b that..."
             ]
           },
           {
             "title": "...focuses on...",
             "caption": "",
             "description": [
-              "Smith (2016) focuses on relevant factors such as...",
-              "The present study focuses on ...",
-              "There is a broad body of literature which focuses on..."
+              "Smith (2016) \b focuses \b on relevant factors such as...",
+              "The present study \b focuses \b on ...",
+              "There is a broad body of literature which \b focuses \b on..."
             ]
           },
           {
             "title": "...argues...",
             "caption": "",
             "description": [
-              "David (2016) argues that...",
-              "A number of writers have argued otherwise...",
-              "As argued by David (2016)...",
-              "The argument raised by others...",
-              "On the contrary, David (2016) argues..."
+              "David (2016) \b argues that...",
+              "A number of writers have \b argued otherwise...",
+              "As \b argued by David (2016)...",
+              "The \b argument raised by others...",
+              "On the contrary, David (2016) \b argues..."
             ]
           },
           {
             "title": "...outlines...",
             "caption": "",
             "description": [
-              "Research by Jones and Peters (2015) outlines the importance of...",
-              "Outlining the importance of disability rights, Shakespeare argues..."
+              "Research by Jones and Peters (2015) \b outlines the importance of...",
+              "\b Outlining the importance of disability rights, Shakespeare argues..."
             ]
           },
           {
             "title": "...states...",
             "caption": "",
             "description": [
-              "Smith (2016) states that...",
-              "A number of writers have stated otherwise...",
-              "As stated by Smith (2016)...",
-              "On the contrary, Smith (2016) states..."
+              "Smith (2016) \b states that...",
+              "A number of writers have \b stated otherwise...",
+              "As \b stated by Smith (2016)...",
+              "On the contrary, Smith (2016) \b states..."
             ]
           },
           {
             "title": "...suggests that...",
             "caption": "",
             "description": [
-              "Barnes (2016) suggests that...",
-              "Highlighting the importance of learning Barnes (2016) suggests that...",
+              "Barnes (2016) \b suggests \b that...",
+              "Highlighting the importance of learning Barnes (2016) \b suggests \b that...",
               "A number of writers including Barnes (2016) have suggested that...",
-              "This article suggests that a direction must be taken by future studies...",
-              "Recent evidence suggests that..."
+              "This article \b suggests \b that a direction must be taken by future studies...",
+              "Recent evidence \b suggests \b that..."
             ]
           },
           {
             "title": "According to...",
             "caption": "",
             "description": [
-              "According to Davis (2016)...",
-              "According to an investigation by Smith et al (2015)",
-              "In addition, according to..."
+              "\b According \b to Davis (2016)...",
+              "\b According \b to an investigation by Smith et al (2015)",
+              "In addition, \b according \b to..."
             ]
           },
           {
             "title": "...defines...",
             "caption": "",
             "description": [
-              "The Oxford English Dictionary defines learning as...",
-              "It could be defined as...",
-              "Johnson defines X as follows..."
+              "The Oxford English Dictionary \b defines learning as...",
+              "It could be \b defined as...",
+              "Johnson \b defines X as follows..."
             ]
           }
         ],
@@ -344,99 +344,99 @@
             "title": "Firstly",
             "caption": "",
             "description": [
-              "It has been shown, firstly, that the missionary journeys cannot...",
-              "Firstly, the conception of \"right\" and \"wrong\" was unfounded...",
-              "The first serious discussions and analyses of X emerged during the 1970s with ...",
-              "Xs were reported in the first studies of Y (e.g., Smith, 1977; Smith and Patel, 1977).",
-              "Firstly, this paper will examine...",
-              "Firstly, it is important to..."
+              "It has been shown, \b firstly, that the missionary journeys cannot...",
+              " \b Firstly, the conception of \"right\" and \"wrong\" was unfounded...",
+              "The \b first serious discussions and analyses of X emerged during the 1970s with ...",
+              "Xs were reported in the \b first studies of Y (e.g., Smith, 1977; Smith and Patel, 1977).",
+              " \b Firstly, this paper will examine...",
+              " \b Firstly, it is important to..."
             ]
           },
           {
             "title": "Secondly",
             "caption": "",
             "description": [
-              "Secondly, this research fails to illustrate...",
-              "Secondly, it is important to note...",
-              "Secondly, this essay focuses on..."
+              " \b Secondly, this research fails to illustrate...",
+              " \b Secondly, it is important to note...",
+              " \b Secondly, this essay focuses on..."
             ]
           },
           {
             "title": "Lastly",
             "caption": "",
             "description": [
-              "Lastly, I would like to remind you that smoking is not allowed.",
-              "Lastly, the authors state that the impact on the treatment group was...",
-              "And lastly, the final departure of the Great Emperor from his heroic army is presented."
+              " \b Lastly, I would like to remind you that smoking is not allowed.",
+              " \b Lastly, the authors state that the impact on the treatment group was...",
+              "And  \b lastly, the final departure of the Great Emperor from his heroic army is presented."
             ]
           },
           {
             "title": "To begin with",
             "caption": "",
             "description": [
-              "To begin with, Buber (1987) identified...",
-              "This paper begins by … It will then go on to...",
-              "To begin with it is important to highlight the differences between…"
+              "\b To \b begin \b with, Buber (1987) identified...",
+              "This paper \b begins by … It will then go on to...",
+              "\b To \b begin \b with, it is important to highlight the differences between…"
             ]
           },
           {
             "title": "In addition",
             "caption": "",
             "description": [
-              "He asked if he might record the interview in addition to taking notes...",
-              "In addition, more than one billion of the world...",
-              "In addition to the four Dawkins, there was Pumpkin Green..."
+              "He asked if he might record the interview \b in \b addition to taking notes...",
+              "In \b  addition, more than one billion of the world...",
+              "In \b  addition to the four Dawkins, there was Pumpkin Green..."
             ]
           },
           {
             "title": "Moreover",
             "caption": "",
             "description": [
-              "Moreover, these findings indicate the need for further research...",
-              "He believed, moreover, that natural law and positive law moved on almost constant and immutable parallel lines.",
-              "Moreover, the significance of.... is important to discuss."
+              "\b Moreover, these findings indicate the need for further research...",
+              "He believed, \b  moreover, that natural law and positive law moved on almost constant and immutable parallel lines.",
+              " \b Moreover, the significance of.... is important to discuss."
             ]
           },
           {
             "title": "Consequently",
             "caption": "",
             "description": [
-              "The peculiarities of structure which we encounter consequently support the view...",
-              "Consequently the negotiations were suspended...",
-              "As a consequence, it can be suggested..."
+              "The peculiarities of structure which we encounter \b consequently support the view...",
+              "\b Consequently the negotiations were suspended...",
+              "As a \b consequence, it can be suggested..."
             ]
           },
           {
             "title": "Furthermore",
             "caption": "",
             "description": [
-              "She won the race, and furthermore, she established a new world record.",
-              "Furthermore, it could be suggested…",
-              "Furthermore, it is clear that..."
+              "She won the race, and \b furthermore, she established a new world record.",
+              "\b Furthermore, it could be suggested…",
+              "\b Furthermore, it is clear that..."
             ]
           },
           {
             "title": "Subsequently",
             "caption": "",
             "description": [
-              "It may subsequently be suggested that…",
-              "He was taken prisoner at the battle of Tinchebrai in 1106, but was subsequently released."
+              "It may \b subsequently be suggested that…",
+              "He was taken prisoner at the battle of Tinchebrai in 1106, but was \b subsequently released."
             ]
           },
           {
             "title": "Regardless of",
             "caption": "",
             "description": [
-              "Regardless of blood glucose concentrations, glucose molecules must first pass through cell membranes via specialized channel proteins in order to be metabolized inside the cell...",
-              "Regardless of this criticism, it can be argued that… achieves the following goals…"
+              "\b Regardless \b of blood glucose concentrations, glucose molecules must first pass through cell membranes via specialised channel proteins in order to be metabolised inside the cell...",
+              "\b Regardless of this criticism, it can be argued that… achieves the following goals…"
             ]
           },
           {
             "title": "Despite",
             "caption": "",
             "description": [
-              "There was compassion in her sparkling gaze despite the gentle humor in her voice.",
-              "Despite being advised not to work due to illness, she continued to do so at her own will."
+              "There was compassion in her sparkling gaze \b despite the gentle humour in her voice.",
+              "\b Despite being advised not to work due to illness, she continued to do so at her own will."
             ]
           }
         ],
@@ -449,86 +449,86 @@
             "title": "On the other hand",
             "caption": "",
             "description": [
-              "On the other hand, no study has examined",
-              "Increasing the heart rate may increase cardiac output. On the other hand, slowing the heart rate may also improve, cardiac efficiency by allowing time for the heart chambers to fill."
+              "\b On \b the \b other \b hand, no study has examined...",
+              "Increasing the heart rate may increase cardiac output. \b On \b the \b other \b hand, slowing the heart rate may also improve, cardiac efficiency by allowing time for the heart chambers to fill."
             ]
           },
           {
             "title": "Besides",
             "caption": "",
             "description": [
-              "Besides indicating a correlation between X and Y, the data suggest that..."
+              "\b Besides indicating a correlation between X and Y, the data suggest that..."
             ]
           },
           {
             "title": "Alternatively",
             "caption": "",
             "description": [
-              "Alternatively, the data could be viewed as being indicative of...",
-              "An alternative perspective..."
+              "\b Alternatively, the data could be viewed as being indicative of...",
+              "An \b alternative perspective..."
             ]
           },
           {
             "title": "In spite of",
             "caption": "",
             "description": [
-              "In spite of this, the findings proved problematic",
-              "The social model of disability remains integral to disability studies research, in spite of the previous discussion of its limitations…",
-              "In spite of much new knowledge about the role of..."
+              "\b In \b spite \b of this, the findings proved problematic",
+              "The social model of disability remains integral to disability studies research, \b in \b spite \b of the previous discussion of its limitations…",
+              "\b In \b spite \b of much new knowledge about the role of..."
             ]
           },
           {
             "title": "Despite",
             "caption": "",
             "description": [
-              "Despite the presence of ATP inside the cell, sufficient free calcium ions are also needed in order to facilitate muscle contraction",
-              "Despite these methodological limitations, the approach is justifiable on the grounds that...",
-              "Despite these findings, there has been little progress in..."
+              "\b Despite the presence of ATP inside the cell, sufficient free calcium ions are also needed in order to facilitate muscle contraction",
+              "\b Despite these methodological limitations, the approach is justifiable on the grounds that...",
+              "\b Despite these findings, there has been little progress in..."
             ]
           },
           {
             "title": "Although",
             "caption": "",
             "description": [
-              "Although, it is important to consider...",
-              "Although exclusion of X did not ..., these results should be interpreted with caution.",
-              "Although findings from more recent research have shown that..."
+              "\b Although, it is important to consider...",
+              "\b Although exclusion of X did not ..., these results should be interpreted with caution.",
+              "\b Although findings from more recent research have shown that..."
             ]
           },
           {
             "title": "Notwithstanding",
             "caption": "",
             "description": [
-              "Notwithstanding these weaknesses, the argument has some merit...",
-              "Notwithstanding these restrictions, the research suggests that..."
+              "\b Notwithstanding these weaknesses, the argument has some merit...",
+              "\b Notwithstanding these restrictions, the research suggests that..."
             ]
           },
           {
             "title": "Nevertheless",
             "caption": "",
             "description": [
-              "Nevertheless, further research is necessary",
-              "Their argument, nevertheless, made a significant contribution to the development of...",
-              "Nevertheless, the study has not escaped criticism..."
+              "\b Nevertheless, further research is necessary",
+              "Their argument, \b nevertheless, made a significant contribution to the development of...",
+              "\b Nevertheless, the study has not escaped criticism..."
             ]
           },
           {
             "title": "However",
             "caption": "",
             "description": [
-              "However, this theory does not fully explain why ...",
-              "However, there is an inconsistency with this argument ...",
-              "A serious weakness with this argument, however, is that ...",
-              "One question that needs to be asked, however, is whether..."
+              "\b However, this theory does not fully explain why ...",
+              "\b However, there is an inconsistency with this argument ...",
+              "A serious weakness with this argument, \b however, is that ...",
+              "One question that needs to be asked, \b however, is whether..."
             ]
           },
           {
             "title": "Nonetheless",
             "caption": "",
             "description": [
-              "The study was long but, nonetheless, informative and thought-provoking.",
-              "The problems are not serious. Nonetheless, they must be acknowledged",
-              "Although this essay has explored the negative aspects of... it is nonetheless acknowledged that..."
+              "The study was long but, \b nonetheless, informative and thought-provoking.",
+              "The problems are not serious. \b Nonetheless, they must be acknowledged",
+              "Although this essay has explored the negative aspects of... it is \b nonetheless acknowledged that..."
             ]
           }
         ],
@@ -541,90 +541,90 @@
             "title": "...pinpoints",
             "caption": "",
             "description": [
-              "Smith (2016) pinpoints the problems with...",
-              "Pinpointing the problems addressed by Smith (2016)..."
+              "Smith (2016) \b pinpoints the problems with...",
+              "\b Pinpointing the problems addressed by Smith (2016)..."
             ]
           },
           {
             "title": "...opines that...",
             "caption": "",
             "description": [
-              "Smith opines that social theory is integral when examining..."
+              "Smith \b opines \b that social theory is integral when examining..."
             ]
           },
           {
             "title": "...maintains that...",
             "caption": "",
             "description": [
-              "Peters (2010, p.1) maintains that the most important factor with regards to...",
-              "Even with the contravening evidence, Smith (2016) maintains that..."
+              "Peters (2010, p.1) \b maintains \b that the most important factor with regards to...",
+              "Even with the contravening evidence, Smith (2016) \b maintains \b that..."
             ]
           },
           {
             "title": "...focuses on...",
             "caption": "",
             "description": [
-              "Smith (2016) focuses on relevant factors such as...",
-              "The present study focuses on ...",
-              "There is a broad body of literature which focuses on..."
+              "Smith (2016) \b focuses \b on relevant factors such as...",
+              "The present study \b focuses \b on ...",
+              "There is a broad body of literature which \b focuses \b on..."
             ]
           },
           {
             "title": "...argues...",
             "caption": "",
             "description": [
-              "David (2016) argues that...",
-              "A number of writers have argued otherwise...",
-              "As argued by David (2016)...",
-              "The argument raised by others...",
-              "On the contrary, David (2016) argues..."
+              "David (2016) \b argues that...",
+              "A number of writers have \b argued otherwise...",
+              "As \b argued by David (2016)...",
+              "The \b argument raised by others...",
+              "On the contrary, David (2016) \b argues..."
             ]
           },
           {
             "title": "...outlines...",
             "caption": "",
             "description": [
-              "Research by Jones and Peters (2015) outlines the importance of...",
-              "Outlining the importance of disability rights, Shakespeare argues..."
+              "Research by Jones and Peters (2015) \b outlines the importance of...",
+              "\b Outlining the importance of disability rights, Shakespeare argues..."
             ]
           },
           {
             "title": "...states...",
             "caption": "",
             "description": [
-              "Smith (2016) states that...",
-              "A number of writers have stated otherwise...",
-              "As stated by Smith (2016)...",
-              "On the contrary, Smith (2016) states..."
+              "Smith (2016) \b states that...",
+              "A number of writers have \b stated otherwise...",
+              "As \b stated by Smith (2016)...",
+              "On the contrary, Smith (2016) \b states..."
             ]
           },
           {
             "title": "...suggests that...",
             "caption": "",
             "description": [
-              "Barnes (2016) suggests that...",
-              "Highlighting the importance of learning Barnes (2016) suggests that...",
-              "A number of writers including Barnes (2016) have suggested that...",
-              "This article suggests that a direction must be taken by future studies",
-              "Recent evidence suggests that..."
+              "Barnes (2016) \b suggests \b that...",
+              "Highlighting the importance of learning Barnes (2016) \b suggests \b that...",
+              "A number of writers including Barnes (2016) have \b suggested \b that...",
+              "This article \b suggests \b that a direction must be taken by future studies",
+              "Recent evidence \b suggests \b that..."
             ]
           },
           {
             "title": "According to...",
             "caption": "",
             "description": [
-              "According to Davis (2016)...",
-              "According to an investigation by Smith et al (2015)",
-              "In addition, according to..."
+              "\b According \b to Davis (2016)...",
+              "\b According \b to an investigation by Smith et al (2015)",
+              "In addition, \b according \b to..."
             ]
           },
           {
             "title": "...defines...",
             "caption": "",
             "description": [
-              "The Oxford English Dictionary defines learning as...",
-              "It could be defined as...",
-              "Johnson defines X as follows..."
+              "The Oxford English Dictionary \b defines learning as...",
+              "It could be \b defined as...",
+              "Johnson \b defines X as follows..."
             ]
           }
         ],
@@ -637,15 +637,15 @@
             "title": "Resulting in",
             "caption": "",
             "description": [
-              "Jones argues x, resulting in a mismatch between..."
+              "Jones argues x, \b resulting \b in a mismatch between..."
             ]
           },
           {
             "title": "Resulting from",
             "caption": "",
             "description": [
-              "Resulting from the experiment theory X has been reinforced",
-              "What results from this approach is..."
+              "\b Resulting \b from the experiment theory X has been reinforced",
+              "What \b results \b from this approach is..."
             ]
           },
           {
@@ -653,65 +653,65 @@
             "caption": "",
             "description": [
               "As a result, these factors contributed to...",
-              "As a result of addressing this area of research, it is inferred that..."
+              "\b As \b a \b result of addressing this area of research, it is inferred that..."
             ]
           },
           {
             "title": "So",
             "caption": "",
             "description": [
-              "So, as a result of this analysis...",
-              "So, it can be seen that..."
+              "\b So, as a result of this analysis...",
+              "\b So, it can be seen that..."
             ]
           },
           {
             "title": "Therefore",
             "caption": "",
             "description": [
-              "Therefore, it is important to consider...",
-              "It could be argued, therefore, that...",
-              "This study should, therefore, be of value to...."
+              "\b Therefore, it is important to consider...",
+              "It could be argued, \b therefore, that...",
+              "This study should, \b therefore, be of value to...."
             ]
           },
           {
             "title": "Owing to",
             "caption": "",
             "description": [
-              "Owing to the high-quality evidence available which supports the use of this particular therapy...",
-              "Around 10,000 people a year become blind owing to a lack of..."
+              "\b Owing \b to the high-quality evidence available which supports the use of this particular therapy...",
+              "Around 10,000 people a year become blind \b owing \b to a lack of..."
             ]
           },
           {
             "title": "Due to",
             "caption": "",
             "description": [
-              "Due to the influx of factors...",
-              "It was due to the influx of factors that...",
-              "It seems possible that the results are due to..."
+              "\b Due \b to the influx of factors...",
+              "It was \b due \b to the influx of factors that...",
+              "It seems possible that the results are \b due \b to..."
             ]
           },
           {
             "title": "Because",
             "caption": "",
             "description": [
-              "The correlation between X and Y is interesting because...",
-              "X has been studied over the last few decades because..."
+              "The correlation between X and Y is interesting \b because...",
+              "X has been studied over the last few decades \b because..."
             ]
           },
           {
             "title": "Since",
             "caption": "",
             "description": [
-              "Since the battle of Tinchebrai in 1106...",
-              "Since X is a factor in this type of context..."
+              "\b Since the battle of Tinchebrai in 1106...",
+              "\b Since X is a factor in this type of context..."
             ]
           },
           {
             "title": "As",
             "caption": "",
             "description": [
-              "As the battle of Tinchebrai demonstrates...",
-              "As long as these conditions are present, we can predict that..."
+              "\b As the battle of Tinchebrai demonstrates...",
+              "\b As long as these conditions are present, we can predict that..."
             ]
           }
         ],
@@ -726,15 +726,15 @@
             "title": "Resulting in",
             "caption": "",
             "description": [
-              "Jones argues x, resulting in a mismatch between..."
+              "Jones argues x, \b resulting \b in a mismatch between..."
             ]
           },
           {
             "title": "Resulting from",
             "caption": "",
             "description": [
-              "Resulting from the experiment theory X has been reinforced",
-              "What results from this approach is..."
+              "\b Resulting \b from the experiment theory X has been reinforced",
+              "What \b results \b from this approach is..."
             ]
           },
           {
@@ -742,65 +742,65 @@
             "caption": "",
             "description": [
               "As a result, these factors contributed to...",
-              "As a result of addressing this area of research, it is inferred that..."
+              "\b As \b a \b result of addressing this area of research, it is inferred that..."
             ]
           },
           {
             "title": "So",
             "caption": "",
             "description": [
-              "So, as a result of this analysis...",
-              "So, it can be seen that..."
+              "\b So, as a result of this analysis...",
+              "\b So, it can be seen that..."
             ]
           },
           {
             "title": "Therefore",
             "caption": "",
             "description": [
-              "Therefore, it is important to consider...",
-              "It could be argued, therefore, that...",
-              "This study should, therefore, be of value to...."
+              "\b Therefore, it is important to consider...",
+              "It could be argued, \b therefore, that...",
+              "This study should, \b therefore, be of value to...."
             ]
           },
           {
             "title": "Owing to",
             "caption": "",
             "description": [
-              "Owing to the high-quality evidence available which supports the use of this particular therapy...",
-              "Around 10,000 people a year become blind owing to a lack of..."
+              "\b Owing \b to the high-quality evidence available which supports the use of this particular therapy...",
+              "Around 10,000 people a year become blind \b owing \b to a lack of..."
             ]
           },
           {
             "title": "Due to",
             "caption": "",
             "description": [
-              "Due to the influx of factors...",
-              "It was due to the influx of factors that...",
-              "It seems possible that the results are due to..."
+              "\b Due \b to the influx of factors...",
+              "It was \b due \b to the influx of factors that...",
+              "It seems possible that the results are \b due \b to..."
             ]
           },
           {
             "title": "Because",
             "caption": "",
             "description": [
-              "The correlation between X and Y is interesting because...",
-              "X has been studied over the last few decades because..."
+              "The correlation between X and Y is interesting \b because...",
+              "X has been studied over the last few decades \b because..."
             ]
           },
           {
             "title": "Since",
             "caption": "",
             "description": [
-              "Since the battle of Tinchebrai in 1106...",
-              "Since X is a factor in this type of context..."
+              "\b Since the battle of Tinchebrai in 1106...",
+              "\b Since X is a factor in this type of context..."
             ]
           },
           {
             "title": "As",
             "caption": "",
             "description": [
-              "As the battle of Tinchebrai demonstrates...",
-              "As long as these conditions are present, we can predict that..."
+              "\b As the battle of Tinchebrai demonstrates...",
+              "\b As long as these conditions are present, we can predict that..."
             ]
           }
         ],
@@ -924,99 +924,99 @@
             "title": "Firstly",
             "caption": "",
             "description": [
-              "It has been shown, firstly, that the missionary journeys cannot...",
-              "Firstly, the conception of \"right\" and \"wrong\" was unfounded...",
-              "The first serious discussions and analyses of X emerged during the 1970s with ...",
-              "Xs were reported in the first studies of Y (e.g., Smith, 1977; Smith and Patel, 1977).",
-              "Firstly, this paper will examine...",
-              "Firstly, it is important to..."
+              "It has been shown, \b firstly, that the missionary journeys cannot...",
+              " \b Firstly, the conception of \"right\" and \"wrong\" was unfounded...",
+              "The \b first serious discussions and analyses of X emerged during the 1970s with ...",
+              "Xs were reported in the \b first studies of Y (e.g., Smith, 1977; Smith and Patel, 1977).",
+              " \b Firstly, this paper will examine...",
+              " \b Firstly, it is important to..."
             ]
           },
           {
             "title": "Secondly",
             "caption": "",
             "description": [
-              "Secondly, this research fails to illustrate...",
-              "Secondly, it is important to note...",
-              "Secondly, this essay focuses on..."
+              " \b Secondly, this research fails to illustrate...",
+              " \b Secondly, it is important to note...",
+              " \b Secondly, this essay focuses on..."
             ]
           },
           {
             "title": "Lastly",
             "caption": "",
             "description": [
-              "Lastly, I would like to remind you that smoking is not allowed.",
-              "Lastly, the authors state that the impact on the treatment group was...",
-              "And lastly, the final departure of the Great Emperor from his heroic army is presented."
+              " \b Lastly, I would like to remind you that smoking is not allowed.",
+              " \b Lastly, the authors state that the impact on the treatment group was...",
+              "And  \b lastly, the final departure of the Great Emperor from his heroic army is presented."
             ]
           },
           {
             "title": "To begin with",
             "caption": "",
             "description": [
-              "To begin with, Buber (1987) identified...",
-              "This paper begins by … It will then go on to...",
-              "To begin with, it is important to highlight the differences between…"
+              "\b To \b begin \b with, Buber (1987) identified...",
+              "This paper \b begins by … It will then go on to...",
+              "\b To \b begin \b with, it is important to highlight the differences between…"
             ]
           },
           {
             "title": "In addition",
             "caption": "",
             "description": [
-              "He asked if he might record the interview in addition to taking notes...",
-              "In addition, more than one billion of the world...",
-              "In addition to the four Dawkins, there was Pumpkin Green..."
+              "He asked if he might record the interview \b  in \b  addition to taking notes...",
+              "In \b addition, more than one billion of the world...",
+              "In \b addition to the four Dawkins, there was Pumpkin Green..."
             ]
           },
           {
             "title": "Moreover",
             "caption": "",
             "description": [
-              "Moreover, these findings indicate the need for further research...",
-              "He believed, moreover, that natural law and positive law moved on almost constant and immutable parallel lines.",
-              "Moreover, the significance of.... is important to discuss."
+              "\b Moreover, these findings indicate the need for further research...",
+              "He believed, \b moreover, that natural law and positive law moved on almost constant and immutable parallel lines.",
+              "\b Moreover, the significance of.... is important to discuss."
             ]
           },
           {
             "title": "Consequently",
             "caption": "",
             "description": [
-              "The peculiarities of structure which we encounter consequently support the view...",
-              "Consequently the negotiations were suspended...",
-              "As a consequence, it can be suggested..."
+              "The peculiarities of structure which we encounter \b consequently support the view...",
+              "\b Consequently the negotiations were suspended...",
+              "As a \b consequence, it can be suggested..."
             ]
           },
           {
             "title": "Furthermore",
             "caption": "",
             "description": [
-              "She won the race, and furthermore, she established a new world record.",
-              "Furthermore, it could be suggested…",
-              "Furthermore, it is clear that..."
+              "She won the race, and \b furthermore, she established a new world record.",
+              "\b Furthermore, it could be suggested…",
+              "\b Furthermore, it is clear that..."
             ]
           },
           {
             "title": "Subsequently",
             "caption": "",
             "description": [
-              "It may subsequently be suggested that…",
-              "He was taken prisoner at the battle of Tinchebrai in 1106, but was subsequently released."
+              "It may \b subsequently be suggested that…",
+              "He was taken prisoner at the battle of Tinchebrai in 1106, but was \b subsequently released."
             ]
           },
           {
             "title": "Regardless of",
             "caption": "",
             "description": [
-              "Regardless of blood glucose concentrations, glucose molecules must first pass through cell membranes via specialized channel proteins in order to be metabolized inside the cell...",
-              "Regardless of this criticism, it can be argued that… achieves the following goals…"
+              "\b Regardless \b of blood glucose concentrations, glucose molecules must first pass through cell membranes via specialised channel proteins in order to be metabolised inside the cell...",
+              "\b Regardless of this criticism, it can be argued that… achieves the following goals…"
             ]
           },
           {
             "title": "Despite",
             "caption": "",
             "description": [
-              "There was compassion in her sparkling gaze despite the gentle humor in her voice.",
-              "Despite being advised not to work due to illness, she continued to do so at her own will."
+              "There was compassion in her sparkling gaze \b despite the gentle humour in her voice.",
+              "\b Despite being advised not to work due to illness, she continued to do so at her own will."
             ]
           }
         ],
@@ -1029,90 +1029,90 @@
             "title": "...pinpoints",
             "caption": "",
             "description": [
-              "Smith (2016) pinpoints the problems with...",
-              "Pinpointing the problems addressed by Smith (2016)..."
+              "Smith (2016) \b pinpoints the problems with...",
+              "\b Pinpointing the problems addressed by Smith (2016)..."
             ]
           },
           {
             "title": "...opines that...",
             "caption": "",
             "description": [
-              "Smith opines that social theory is integral when examining..."
+              "Smith \b opines \b that social theory is integral when examining..."
             ]
           },
           {
             "title": "...maintains that...",
             "caption": "",
             "description": [
-              "Peters (2010, p.1) maintains that the most important factor with regards to...",
-              "Even with the contravening evidence, Smith (2016) maintains that..."
+              "Peters (2010, p.1) \b maintains \b that the most important factor with regards to...",
+              "Even with the contravening evidence, Smith (2016) \b maintains \b that..."
             ]
           },
           {
             "title": "...focuses on...",
             "caption": "",
             "description": [
-              "Smith (2016) focuses on relevant factors such as...",
-              "The present study focuses on ...",
-              "There is a broad body of literature which focuses on..."
+              "Smith (2016) \b focuses \b on relevant factors such as...",
+              "The present study \b focuses \b on ...",
+              "There is a broad body of literature which \b focuses \b on..."
             ]
           },
           {
             "title": "...argues...",
             "caption": "",
             "description": [
-              "David (2016) argues that...",
-              "A number of writers have argued otherwise...",
-              "As argued by David (2016)...",
-              "The argument raised by others...",
-              "On the contrary, David (2016) argues..."
+              "David (2016) \b argues that...",
+              "A number of writers have \b argued otherwise...",
+              "As \b argued by David (2016)...",
+              "The \b argument raised by others...",
+              "On the contrary, David (2016) \b argues..."
             ]
           },
           {
             "title": "...outlines...",
             "caption": "",
             "description": [
-              "Research by Jones and Peters (2015) outlines the importance of...",
-              "Outlining the importance of disability rights, Shakespeare argues..."
+              "Research by Jones and Peters (2015) \b outlines the importance of...",
+              "\b Outlining the importance of disability rights, Shakespeare argues..."
             ]
           },
           {
             "title": "...states...",
             "caption": "",
             "description": [
-              "Smith (2016) states that...",
-              "A number of writers have stated otherwise...",
-              "As stated by Smith (2016)...",
-              "On the contrary, Smith (2016) states..."
+              "Smith (2016) \b states that...",
+              "A number of writers have \b stated otherwise...",
+              "As \b stated by Smith (2016)...",
+              "On the contrary, Smith (2016) \b states..."
             ]
           },
           {
             "title": "...suggests that...",
             "caption": "",
             "description": [
-              "Barnes (2016) suggests that...",
-              "Highlighting the importance of learning Barnes (2016) suggests that...",
-              "A number of writers including Barnes (2016) have suggested that...",
-              "This article suggests that a direction must be taken by future studies",
-              "Recent evidence suggests that..."
+              "Barnes (2016) \b suggests \b that...",
+              "Highlighting the importance of learning Barnes (2016) \b suggests \b that...",
+              "A number of writers including Barnes (2016) have \b suggested \b that...",
+              "This article \b suggests \b that a direction must be taken by future studies",
+              "Recent evidence \b suggests \b that..."
             ]
           },
           {
             "title": "According to...",
             "caption": "",
             "description": [
-              "According to Davis (2016)...",
-              "According to an investigation by Smith et al (2015)",
-              "In addition, according to..."
+              "\b According \b to Davis (2016)...",
+              "\b According \b to an investigation by Smith et al (2015)",
+              "In addition, \b according \b to..."
             ]
           },
           {
             "title": "...defines...",
             "caption": "",
             "description": [
-              "The Oxford English Dictionary defines learning as...",
-              "It could be defined as...",
-              "Johnson defines X as follows..."
+              "The Oxford English Dictionary \b defines learning as...",
+              "It could be \b defined as...",
+              "Johnson \b defines X as follows..."
             ]
           }
         ],
@@ -1125,15 +1125,15 @@
             "title": "Resulting in",
             "caption": "",
             "description": [
-              "Jones argues x, resulting in a mismatch between..."
+              "Jones argues x, \b resulting \b in a mismatch between..."
             ]
           },
           {
             "title": "Resulting from",
             "caption": "",
             "description": [
-              "Resulting from the experiment theory X has been reinforced",
-              "What results from this approach is..."
+              "\b Resulting \b from the experiment theory X has been reinforced",
+              "What \b results \b from this approach is..."
             ]
           },
           {
@@ -1141,65 +1141,65 @@
             "caption": "",
             "description": [
               "As a result, these factors contributed to...",
-              "As a result of addressing this area of research, it is inferred that..."
+              "\b As \b a \b result of addressing this area of research, it is inferred that..."
             ]
           },
           {
             "title": "So",
             "caption": "",
             "description": [
-              "So, as a result of this analysis...",
-              "So, it can be seen that..."
+              "\b So, as a result of this analysis...",
+              "\b So, it can be seen that..."
             ]
           },
           {
             "title": "Therefore",
             "caption": "",
             "description": [
-              "Therefore, it is important to consider...",
-              "It could be argued, therefore, that...",
-              "This study should, therefore, be of value to...."
+              "\b Therefore, it is important to consider...",
+              "It could be argued, \b therefore, that...",
+              "This study should, \b therefore, be of value to...."
             ]
           },
           {
             "title": "Owing to",
             "caption": "",
             "description": [
-              "Owing to the high-quality evidence available which supports the use of this particular therapy...",
-              "Around 10,000 people a year become blind owing to a lack of..."
+              "\b Owing \b to the high-quality evidence available which supports the use of this particular therapy...",
+              "Around 10,000 people a year become blind \b owing \b to a lack of..."
             ]
           },
           {
             "title": "Due to",
             "caption": "",
             "description": [
-              "Due to the influx of factors...",
-              "It was due to the influx of factors that...",
-              "It seems possible that the results are due to..."
+              "\b Due \b to the influx of factors...",
+              "It was \b due \b to the influx of factors that...",
+              "It seems possible that the results are \b due \b to..."
             ]
           },
           {
             "title": "Because",
             "caption": "",
             "description": [
-              "The correlation between X and Y is interesting because...",
-              "X has been studied over the last few decades because..."
+              "The correlation between X and Y is interesting \b because...",
+              "X has been studied over the last few decades \b because..."
             ]
           },
           {
             "title": "Since",
             "caption": "",
             "description": [
-              "Since the battle of Tinchebrai in 1106...",
-              "Since X is a factor in this type of context..."
+              "\b Since the battle of Tinchebrai in 1106...",
+              "\b Since X is a factor in this type of context..."
             ]
           },
           {
             "title": "As",
             "caption": "",
             "description": [
-              "As the battle of Tinchebrai demonstrates...",
-              "As long as these conditions are present, we can predict that..."
+              "\b As the battle of Tinchebrai demonstrates...",
+              "\b As long as these conditions are present, we can predict that..."
             ]
           }
         ],
@@ -1212,86 +1212,86 @@
             "title": "On the other hand",
             "caption": "",
             "description": [
-              "On the other hand, no study has examined",
-              "Increasing the heart rate may increase cardiac output. On the other hand, slowing the heart rate may also improve cardiac efficiency by allowing time for the heart chambers to fill."
+              "\b On the other hand, no study has examined",
+              "Increasing the heart rate may increase cardiac output. \b On the other hand, slowing the heart rate may also improve cardiac efficiency by allowing time for the heart chambers to fill."
             ]
           },
           {
             "title": "Besides",
             "caption": "",
             "description": [
-              "Besides indicating a correlation between X and Y, the data suggest that..."
+              "\b Besides indicating a correlation between X and Y, the data suggest that..."
             ]
           },
           {
             "title": "Alternatively",
             "caption": "",
             "description": [
-              "Alternatively, the data could be viewed as being indicative of...",
-              "An alternative perspective..."
+              "\b Alternatively, the data could be viewed as being indicative of...",
+              "An \b alternative perspective..."
             ]
           },
           {
             "title": "In spite of",
             "caption": "",
             "description": [
-              "In spite of this, the findings proved problematic",
-              "The social model of disability remains integral to disability studies research, in spite of the previous discussion of its limitations…",
-              "In spite of much new knowledge about the role of..."
+              "\b In \b spite \b of this, the findings proved problematic",
+              "The social model of disability remains integral to disability studies research, \b in \b spite \b of the previous discussion of its limitations…",
+              "\b In \b spite \b of much new knowledge about the role of..."
             ]
           },
           {
             "title": "Despite",
             "caption": "",
             "description": [
-              "Despite the presence of ATP inside the cell, sufficient free calcium ions are also needed in order to facilitate muscle contraction",
-              "Despite these methodological limitations, the approach is justifiable on the grounds that...",
-              "Despite these findings, there has been little progress in..."
+              "\b Despite the presence of ATP inside the cell, sufficient free calcium ions are also needed in order to facilitate muscle contraction",
+              "\b Despite these methodological limitations, the approach is justifiable on the grounds that...",
+              "\b Despite these findings, there has been little progress in..."
             ]
           },
           {
             "title": "Although",
             "caption": "",
             "description": [
-              "Although, it is important to consider...",
-              "Although exclusion of X did not ..., these results should be interpreted with caution.",
-              "Although findings from more recent research have shown that..."
+              "\b Although, it is important to consider...",
+              "\b Although exclusion of X did not ..., these results should be interpreted with caution.",
+              "\b Although findings from more recent research have shown that..."
             ]
           },
           {
             "title": "Notwithstanding",
             "caption": "",
             "description": [
-              "Notwithstanding these weaknesses, the argument has some merit...",
-              "Notwithstanding these restrictions, the research suggests that..."
+              "\b Notwithstanding these weaknesses, the argument has some merit...",
+              "\b Notwithstanding these restrictions, the research suggests that..."
             ]
           },
           {
             "title": "Nevertheless",
             "caption": "",
             "description": [
-              "Nevertheless, further research is necessary",
-              "Their argument, nevertheless, made a significant contribution to the development of...",
-              "Nevertheless, the study has not escaped criticism..."
+              "\b Nevertheless, further research is necessary",
+              "Their argument, \b nevertheless, made a significant contribution to the development of...",
+              "\b Nevertheless, the study has not escaped criticism..."
             ]
           },
           {
             "title": "However",
             "caption": "",
             "description": [
-              "However, this theory does not fully explain why ...",
-              "However, there is an inconsistency with this argument ...",
-              "A serious weakness with this argument, however, is that ...",
-              "One question that needs to be asked, however, is whether..."
+              "\b However, this theory does not fully explain why ...",
+              "\b However, there is an inconsistency with this argument ...",
+              "A serious weakness with this argument, \b however, is that ...",
+              "One question that needs to be asked, \b however, is whether..."
             ]
           },
           {
             "title": "Nonetheless",
             "caption": "",
             "description": [
-              "The study was long but, nonetheless, informative and thought-provoking.",
-              "The problems are not serious. Nonetheless, they must be acknowledged",
-              "Although this essay has explored the negative aspects of... it is nonetheless acknowledged that..."
+              "The study was long but, \b nonetheless, informative and thought-provoking.",
+              "The problems are not serious. \b Nonetheless, they must be acknowledged",
+              "Although this essay has explored the negative aspects of... it is \b nonetheless acknowledged that..."
             ]
           }
         ],
