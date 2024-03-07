@@ -1,9 +1,8 @@
 import {Linking, StyleSheet, Text, TouchableOpacity, View} from 'react-native';
 import React from 'react';
-
 const Contact = () => {
   const openEmailLink = () => {
-    Linking.openURL(`mailto:contact@www.newProject.org.uk`);
+    Linking.openURL(`mailto:contact@www.wordbank.org.uk`);
   };
   return (
     <View style={styles.flexContainer}>
@@ -11,19 +10,15 @@ const Contact = () => {
         <Text style={styles.heading1}>Contact</Text>
         <Text style={styles.heading2}>To contact, please email us at:</Text>
         <TouchableOpacity onPress={openEmailLink}>
-          <Text style={styles.heading3}>contact@www.newProject.org.uk</Text>
+          <Text style={styles.heading3}>contact@www.wordbank.org.uk</Text>
         </TouchableOpacity>
       </View>
     </View>
   );
 };
-
 export default Contact;
-
 const styles = StyleSheet.create({
   flexContainer: {
-    // justifyContent: 'center',
-    // alignItems: 'center',
     marginLeft: 20,
     flex: 1,
     height: '100%',

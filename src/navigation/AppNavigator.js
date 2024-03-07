@@ -1,10 +1,5 @@
 import {
   View,
-  Text,
-  Button,
-  Modal,
-  StyleSheet,
-  Linking,
   TouchableOpacity,
 } from 'react-native';
 import React, {useEffect, useState} from 'react';
@@ -14,20 +9,14 @@ import Home from '../screens/Home';
 import SplashScreen from 'react-native-splash-screen';
 import DetailPage from '../screens/DetailPage';
 import Icon from 'react-native-vector-icons/FontAwesome5';
-
 import Contact from '../screens/ContactPage';
 import Accordion from '../components/Accordion';
 import Header from '../components/Header';
 import {SafeAreaProvider} from 'react-native-safe-area-context';
 import AboutPage from '../screens/AboutPage';
-import JustificationPage from '../screens/JustficationPage';
-import SupportPage from '../screens/SupportPage';
-import ImplicationsPage from '../screens/ImplicationsPage';
 const Stack = createStackNavigator();
-
 export default function MyStack() {
   const [modalVisible, setModalVisible] = useState(false);
-
   useEffect(() => {
     setTimeout(() => {
       SplashScreen.hide();
@@ -35,7 +24,7 @@ export default function MyStack() {
   }, []);
   return (
     <>
-      <SafeAreaProvider style={styles.container}>
+      <SafeAreaProvider>
         <NavigationContainer>
           <Stack.Navigator>
             <Stack.Screen
@@ -51,7 +40,7 @@ export default function MyStack() {
               options={{
                 headerShown: true,
                 headerTitleAlign: 'center',
-                headerTitle: 'newProject',
+                headerTitle: 'WORDBANK',
               }}
             />
             <Stack.Screen
@@ -60,7 +49,7 @@ export default function MyStack() {
               options={{
                 headerShown: true,
                 headerTitleAlign: 'center',
-                headerTitle: 'newProject',
+                headerTitle: 'WORDBANK',
               }}
             />
             <Stack.Screen
@@ -76,7 +65,7 @@ export default function MyStack() {
               options={{
                 headerShown: true,
                 headerTitleAlign: 'center',
-                headerTitle: 'newProject',
+                headerTitle: 'WORDBANK',
                 headerShadowVisible: true,
                 headerRight: () => (
                   <View style={{marginEnd: 20}}>
@@ -87,56 +76,7 @@ export default function MyStack() {
                 ),
               }}
             />
-            <Stack.Screen
-              name="ImplicationsPage"
-              component={ImplicationsPage}
-              options={{
-                headerShown: true,
-                headerTitleAlign: 'center',
-                headerTitle: 'newProject',
-                headerRight: () => (
-                  <View style={{marginEnd: 20}}>
-                    <TouchableOpacity onPress={() => setModalVisible(true)}>
-                      <Icon name="ellipsis-v" size={30} color="#0274B3" />
-                    </TouchableOpacity>
-                  </View>
-                ),
-              }}
-            />
-            <Stack.Screen
-              name="JustificationPage"
-              component={JustificationPage}
-              options={{
-                headerShown: true,
-                headerTitleAlign: 'center',
-                headerTitle: 'newProject',
-                headerRight: () => (
-                  <View style={{marginEnd: 20}}>
-                    <TouchableOpacity onPress={() => setModalVisible(true)}>
-                      <Icon name="ellipsis-v" size={30} color="#0274B3" />
-                    </TouchableOpacity>
-                  </View>
-                ),
-              }}
-            />
-            <Stack.Screen
-              name="SupportPage"
-              component={SupportPage}
-              options={{
-                headerShown: true,
-                headerTitleAlign: 'center',
-                headerTitle: 'newProject',
-                headerRight: () => (
-                  <View style={{marginEnd: 20}}>
-                    <TouchableOpacity onPress={() => setModalVisible(true)}>
-                      <Icon name="ellipsis-v" size={30} color="#0274B3" />
-                    </TouchableOpacity>
-                  </View>
-                ),
-              }}
-            />
           </Stack.Navigator>
-          {/* <Text>Hi</Text> */}
           <Header
             modalVisible={modalVisible}
             setModalVisible={setModalVisible}
@@ -146,11 +86,3 @@ export default function MyStack() {
     </>
   );
 }
-
-const styles = StyleSheet.create({
-  // container: {
-  //   // flex: 1,
-  //   justifyContent: 'flex-start',
-  //   alignItems: 'center',
-  // },
-});

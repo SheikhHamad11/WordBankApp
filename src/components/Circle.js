@@ -17,30 +17,13 @@ const Circle = ({angle, setAngle, setcenterClick}) => {
       onStartShouldSetPanResponder: () => true,
       onPanResponderMove: (event, gestureState) => {
         const {moveX, moveY} = gestureState;
-
-        // Calculate the displacement from the center
         const dx = moveX - circleLayout.current.centerX;
         const dy = moveY - circleLayout.current.centerY;
-        // const dx = moveX - center.x;
-        // const dy = moveY - center.y;
-
-        // Calculate the angle in radians
         const angleRad = Math.atan2(dy, dx);
-
-        // Convert the angle to degrees
         const angleDeg = (angleRad * 180) / Math.PI;
-
-        // Adjust the angle to be positive and between 0 and 360
-        const dynamicOffset = calculateDynamicOffset(moveX, moveY);
         const positiveAngle = (angleDeg + 360) % 360;
-        console.log(
-          `dynamicoffset: ${dynamicOffset} moveX: ${moveX} moveY: ${moveY} angle: ${positiveAngle} `,
-        );
         rotation.setValue(positiveAngle);
         setAngle(positiveAngle);
-        // Set the angle state
-        // rotation.setValue(positiveAngle);
-        // setAngle(positiveAngle);
       },
     }),
   );
@@ -49,18 +32,10 @@ const Circle = ({angle, setAngle, setcenterClick}) => {
       onStartShouldSetPanResponder: () => true,
       onPanResponderGrant: (event, gestureState) => {
         const {pageX, pageY} = event.nativeEvent;
-
-        // Get the screen dimensions
         const screenWidth = Dimensions.get('window').width;
         const screenHeight = Dimensions.get('window').height;
-        // console.log(circleLayout.current);
-
-        // Normalize pageX and pageY values
         const normalizedX = pageX / screenWidth;
         const normalizedY = pageY / screenHeight;
-        console.log(`normalizedX: ${normalizedX}, normalizedY: ${normalizedY}`);
-
-        // Define regions based on normalized values
         const region1 =
           normalizedX >= 0.25 &&
           normalizedX <= 0.67 &&
@@ -86,13 +61,11 @@ const Circle = ({angle, setAngle, setcenterClick}) => {
           normalizedX <= 0.65 &&
           normalizedY >= 0.38 &&
           normalizedY <= 0.54;
-
         if (region1) {
           setTouchResponce(1);
           setAngle(270);
         } else if (region2) {
           setTouchResponce(2);
-
           setAngle(360);
         } else if (region3) {
           setTouchResponce(3);
@@ -103,57 +76,24 @@ const Circle = ({angle, setAngle, setcenterClick}) => {
         } else if (regionMiddle) {
           setcenterClick(true);
         } else {
-          // const dx = pageX - center.x;
-          // const dy = pageY - center.y;
           const dx = pageX - circleLayout.current.centerX;
           const dy = pageY - circleLayout.current.centerY;
-
-          // Calculate the angle in radians
           const angleRad = Math.atan2(dy, dx);
-
-          // Convert the angle to degrees
           const angleDeg = (angleRad * 180) / Math.PI;
-
-          // Adjust the angle to be positive and between 0 and 360
-          // const dynamicOffset = calculateDynamicOffset(moveX, moveY);
           const positiveAngle = (angleDeg + 360) % 360;
-          console.log(
-            ` pageX: ${pageX} pageY: ${pageY} angle: ${positiveAngle}`,
-          );
-          // rotation.setValue(positiveAngle);
           setTouchResponce(5);
-          //  setAngle(180);
           setAngle(positiveAngle);
         }
-
-        // console.log(`pageX: ${pageX} pageY: ${pageY}`);
-        // Additional tasks or setup when the touch gesture begins
       },
       onPanResponderMove: (event, gestureState) => {
         const {moveX, moveY} = gestureState;
-
-        // Calculate the displacement from the center
         const dx = moveX - circleLayout.current.centerX;
         const dy = moveY - circleLayout.current.centerY;
-        console.log('CenterX:', circleLayout.current.centerX);
-
-        // Calculate the angle in radians
         const angleRad = Math.atan2(dy, dx);
-
-        // Convert the angle to degrees
         const angleDeg = (angleRad * 180) / Math.PI;
-
-        // Adjust the angle to be positive and between 0 and 360
-        // const dynamicOffset = calculateDynamicOffset(moveX, moveY);
         const positiveAngle = (angleDeg + 360) % 360;
-        console.log(
-          `moveX: ${moveX} moveY: ${moveY} angle: ${positiveAngle} dx:${dx} dy:${dy}`,
-        );
         rotation.setValue(positiveAngle);
         setAngle(positiveAngle);
-        // Set the angle state
-        // rotation.setValue(positiveAngle);
-        // setAngle(positiveAngle);
       },
     }),
   );
@@ -169,10 +109,9 @@ const Circle = ({angle, setAngle, setcenterClick}) => {
 
   useEffect(() => {
     if (touchResponce) {
-      console.log(touchResponce);
       setTouchResponce(0);
       const rotateAnimation = Animated.timing(rotation, {
-        toValue: angle, // Rotate to the specified angle
+        toValue: angle, 
         duration: 500,
         easing: Easing.linear,
         useNativeDriver: true,
@@ -180,57 +119,22 @@ const Circle = ({angle, setAngle, setcenterClick}) => {
       rotateAnimation.start();
     }
   }, [rotation, touchResponce]);
-
-  useEffect(() => {
-    const height = Dimensions.get('window').height - 90;
-    const percent = (90 * 100) / Dimensions.get('window').height;
-    console.log(
-      `BeforeX: ${(Dimensions.get('window').width - 50) / 2} BeforeY:${
-        (Dimensions.get('window').height -
-          (10.567890691716482 * Dimensions.get('window').height) / 100) /
-        2
-      }`,
-    );
-    console.log(
-      `AfterX: ${circleCenter.centerX} AfterY:${circleCenter.centerY}`,
-    );
-    console.log(`CenterX: ${center.x} CenterY:${center.y}`);
-  }, [circleCenter]);
-
-  const calculateDynamicOffset = (pageX, pageY) => {
-    // You can customize this function to calculate the dynamic offset based on your requirements
-    // The offset determines how much the angle should be adjusted based on the touch position
-    // This helps to keep the circular slider within a certain range
-
-    // For example, you can calculate the offset based on the distance from the center
-    const distanceX = Math.abs(pageX - center.x);
-    const distanceY = Math.abs(pageY - center.y);
-    const totalDistance = Math.sqrt(distanceX ** 2 + distanceY ** 2);
-    const maxDistance = Math.sqrt(center.x ** 2 + center.y ** 2);
-    const maxOffset = 50; // Adjust this value based on your preference
-
-    return (totalDistance / maxDistance) * maxOffset;
-  };
   const polarToCartesian = (angle, radius) => {
     const radians = (angle * Math.PI) / 180;
     const x = center.x + radius * Math.cos(radians);
     const y = center.y + radius * Math.sin(radians);
     return {x, y};
   };
-
   const {x, y} = polarToCartesian(0, radius);
-  // : polarToCartesian(angle, radius);
   const getTriangleStyle = () => {
     const radians = rotation.interpolate({
       inputRange: [0, 360],
       outputRange: ['0deg', '360deg'],
     });
-
     const triangleBasePosition = {
       left: x,
       top: y,
     };
-
     const triangleStyle = {
       width: 0,
       height: 0,
@@ -240,11 +144,8 @@ const Circle = ({angle, setAngle, setcenterClick}) => {
       borderLeftWidth: 25,
       borderRightWidth: 25,
       borderBottomWidth: 15,
-      // borderLeftColor: '#F80707',
       borderLeftColor: 'transparent',
       borderRightColor: '#F80707',
-      // borderBottomColor: '#F80707',
-      // borderRightColor: 'transparent',
       borderTopColor: 'transparent',
       borderBottomColor: 'transparent',
       position: 'absolute',
@@ -263,7 +164,6 @@ const Circle = ({angle, setAngle, setcenterClick}) => {
     const centerY = y + height / 2 - 15.18;
     const radius = width / 2;
     setCircleCenter({centerX, centerY, radius});
-    console.log(x, y, width, height, centerX, centerY);
     circleLayout.current = {x, y, width, height, centerX, centerY};
   };
   return (

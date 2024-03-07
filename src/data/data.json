@@ -3,11 +3,11 @@
   "contact": {
     "heading": "Contact",
     "contents": "To contact, please email at:",
-    "link": "mailto:contact@www.newProject.org.uk"
+    "link": "mailto:contact@www.wordbank.org.uk"
   },
 
   "about": {
-    "heading": "About newProject",
+    "heading": "About WORDBANK",
     "contents": [
       "During academic writing, authors always require a variety of words and phrases in order to avoid repetition and overuse. Having a variety of words in any piece of academic writing adds flow, strength, readability, professionalism and makes the work easy to comprehend and follow.",
       "This smartphone application offers authors a large variety of words to choose from. It opens with a paragraph model and displays the four stages that constitute a typical paragraph. Tapping each one of these stages offers a list of words and phrases relevant to that stage. Each of these, in turn, when tapped provide a list of examples of their use.",
@@ -813,103 +813,103 @@
             "title": "Overall",
             "caption": "",
             "description": [
-              "Overall, the evidence points to...",
-              "Overall, the study strengthens the idea that...",
-              "Overall, these studies suggest that...",
-              "The overall aim of this study was..."
+              "\b Overall, the evidence points to...",
+              "\b Overall, the study strengthens the idea that...",
+              "\b Overall, these studies suggest that...",
+              "The \b overall aim of this study was..."
             ]
           },
           {
             "title": "To sum up",
             "caption": "",
             "description": [
-              "To sum up, this was a very informative paper containing many innovative ideas...",
-              "To sum up, the research reviewed...",
-              "To sum up, there is little known between X and Y...",
-              "To sum up, the statistics show..."
+              "\b To \b sum \b up, this was a very informative paper containing many innovative ideas...",
+              "\b To \b sum \b up, the research reviewed...",
+              "\b To \b sum \b up, there is little known between X and Y...",
+              "\b To \b sum \b up, the statistics show..."
             ]
           },
           {
             "title": "On the whole",
             "caption": "",
             "description": [
-              "On the whole, it is clear that...",
-              "The participants on the whole showed..."
+              "\b On \b the \b whole, it is clear that...",
+              "The participants \b on \b the \b whole showed..."
             ]
           },
           {
             "title": "Finally",
             "caption": "",
             "description": [
-              "Finally, the statistical significance of the findings needs to be determined in order to make sensible recommendations...",
-              "Finally, a number of limitations need to be discussed...",
-              "Finally, it could be argued..."
+              "\b Finally, the statistical significance of the findings needs to be determined in order to make sensible recommendations...",
+              "\b Finally, a number of limitations need to be discussed...",
+              "\b Finally, it could be argued..."
             ]
           },
           {
             "title": "In brief",
             "caption": "",
             "description": [
-              "Briefly, the main points are...",
-              "This paper has given a brief overview of...",
-              "The final chapter gives a brief synopsis of...",
-              "This section will outline a brief critique of the findings..."
+              "\b Briefly, the main points are...",
+              "This paper has given a \b brief overview of...",
+              "The final chapter gives a \b brief synopsis of...",
+              "This section will outline a \b brief critique of the findings..."
             ]
           },
           {
             "title": "To summarise",
             "caption": "",
             "description": [
-              "To summarise, X's argument appears to suggest...",
-              "To summarise, these results corroborate the ideas of...",
-              "To summarise, it could be stated that..."
+              "\b To \b summarise, X's argument appears to suggest...",
+              "\b To \b summarise, these results corroborate the ideas of...",
+              "\b To \b summarise, it could be stated that..."
             ]
           },
           {
             "title": "Hence",
             "caption": "",
             "description": [
-              "Hence the objective of this essay was to find out if...",
-              "Hence, it could be hypothesized that..."
+              "\b Hence the objective of this essay was to find out if...",
+              "\b Hence, it could be hypothesized that..."
             ]
           },
           {
             "title": "Thus",
             "caption": "",
             "description": [
-              "Thus, the present study deals with...",
-              "To date, thus far...",
-              "It can thus be suggested...",
-              "The evidence presented thus far..."
+              "\b Thus, the present study deals with...",
+              "To date, \b thus far...",
+              "It can \b thus be suggested...",
+              "The evidence presented \b thus far..."
             ]
           },
           {
             "title": "In conclusion",
             "caption": "",
             "description": [
-              "Conclusively, it appears that...",
-              "In conclusion, this essay has demonstrated that...",
-              "In conclusion, these studies...",
-              "In conclusion, the following can be drawn from the present study..."
+              "\b Conclusively, it appears that...",
+              "\b In \b conclusion, this essay has demonstrated that...",
+              "\b In \b conclusion, these studies...",
+              "\b In \b conclusion, the following can be drawn from the present study..."
             ]
           },
           {
             "title": "Therefore",
             "caption": "",
             "description": [
-              "Therefore, the intention of the study was to...",
-              "The X that has been identified therefore assists in the understanding of Y",
-              "Future research should therefore concentrate on the investigation of...",
-              "It is possible, therefore, that...",
-              "It can therefore be assumed that..."
+              "\b Therefore, the intention of the study was to...",
+              "The X that has been identified \b therefore assists in the understanding of Y",
+              "Future research should \b therefore concentrate on the investigation of...",
+              "It is possible, \b therefore, that...",
+              "It can \b therefore be assumed that..."
             ]
           },
           {
             "title": "Owing to",
             "caption": "",
             "description": [
-              "Owing to the high quality evidence available which supports the use of this particular therapy...",
-              "Around 10,000 people a year become blind owing to a lack of..."
+              "\b Owing \b to the high quality evidence available which supports the use of this particular therapy...",
+              "Around 10,000 people a year become blind \b owing \b to a lack of..."
             ]
           }
         ],

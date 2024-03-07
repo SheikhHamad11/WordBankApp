@@ -9,11 +9,11 @@ import {
 } from 'react-native';
 import React from 'react';
 
-const AboutnewProject = () => {
+const AboutWordBank = () => {
   return (
     <ScrollView style={{marginVertical: 10}}>
       <View style={styles.flexContainer}>
-        <Text style={styles.heading1}>About newProject</Text>
+        <Text style={styles.heading1}>About WORDBANK</Text>
         <Image
           style={styles.image}
           source={require('../../src/Images/icon.png')}
@@ -73,7 +73,7 @@ const AboutnewProject = () => {
   );
 };
 
-export default AboutnewProject;
+export default AboutWordBank;
 
 const styles = StyleSheet.create({
   flexContainer: {

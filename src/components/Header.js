@@ -10,7 +10,6 @@ import React, {useState} from 'react';
 import {Modal} from 'react-native-paper';
 import Icon from 'react-native-vector-icons/FontAwesome5';
 import {useNavigation} from '@react-navigation/native';
-
 const Header = ({modalVisible, setModalVisible}) => {
   const closeModal = () => {
     setModalVisible(false);
@@ -54,10 +53,8 @@ const Header = ({modalVisible, setModalVisible}) => {
                 }}>
                 <Icon name="file-alt" size={35} color="#0274B3" />
 
-                {/* <Icon icon="fa-file-alt" size={35} color="#0274B3" /> */}
               </TouchableOpacity>
             </View>
-            {/* <Button title="Close Modal" onPress={closeModal} /> */}
           </View>
         </View>
       </TouchableOpacity>
@@ -75,9 +72,7 @@ const styles = StyleSheet.create({
   modalContainer: {
     width: '100%',
     height: Dimensions.get('window').height,
-    // flex: 1,
     paddingTop: 60,
-    // paddingEnd: 10,
     justifyContent: 'flex-start',
     alignItems: 'flex-end',
     backgroundColor: 'rgba(0, 0, 0, 0.5)',
@@ -87,7 +82,6 @@ const styles = StyleSheet.create({
     marginEnd: 10,
     padding: 10,
     borderRadius: 10,
-    // elevation: 5,
   },
   overlay: {
     flex: 1,
