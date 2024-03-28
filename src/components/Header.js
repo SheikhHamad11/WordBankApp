@@ -1,12 +1,11 @@
 import {
   StyleSheet,
-  Text,
   TouchableOpacity,
   View,
   Dimensions,
   Linking,
 } from 'react-native';
-import React, {useState} from 'react';
+import React from 'react';
 import {Modal} from 'react-native-paper';
 import Icon from 'react-native-vector-icons/FontAwesome5';
 import {useNavigation} from '@react-navigation/native';

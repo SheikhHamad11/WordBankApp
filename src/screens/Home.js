@@ -1,23 +1,23 @@
 import {View, Text, StyleSheet, ScrollView, Dimensions} from 'react-native';
 import React, {useEffect, useMemo, useState} from 'react';
 import Circle from '../components/Circle';
-import {useSelector} from 'react-redux';
 import {
   WordBankCategories,
   WordBankHeading,
 } from '../Redux_Configuration/Selector';
+import {useWordBank} from '../Context_Configuration/Main_Context';
 export default function Home({navigation}) {
   const [index, setindex] = useState(0);
   const [centerClick, setcenterClick] = useState(false);
-  const {heading, Category} = useSelector(
-    useMemo(
-      () => state => ({
-        heading: WordBankHeading(state),
-        Category: WordBankCategories(state, index),
-      }),
-      [index],
-    ),
+  const state = useWordBank();
+  const {heading, Category} = useMemo(
+    () => ({
+      heading: WordBankHeading(state),
+      Category: WordBankCategories(state, index),
+    }),
+    [index, state],
   );
+
   const [angle, setangle] = useState(0);
   useEffect(() => {
     if (!centerClick) {

@@ -1,15 +1,15 @@
 import {createSelector} from 'reselect';
-export const WordBankHeadingfunc = state => state.WordBank.data.heading;
-export const WordBankContactfunc = state => state.WordBank.data.contact;
-export const WordBankaboutfunc = state => state.WordBank.data.about;
-export const WordBankDatafunc = (state, index) => ({
-  ...state.WordBank.data.categories[index],
-  subCategories: [...state.WordBank.data.subcategories[index]],
-});
+export const WordBankHeadingfunc = state => state.heading;
+export const WordBankContactfunc = state => state.contact;
+export const WordBankaboutfunc = state => state.about;
+export const WordBankDatafunc = (state, index) => {
+  return {
+    ...state.categories[index],
+    subCategories: [...state.subcategories[index]],
+  };
+};
 export const WordBankCategoriesfunc = (state, index = 0) => {
-  return (
-    state.WordBank.data?.categories && state.WordBank.data?.categories[index]
-  );
+  return state?.categories && state?.categories[index];
 };
 
 export const WordBankContact = createSelector(
